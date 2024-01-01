@@ -3,9 +3,9 @@ header:
     title: 'Home'
     link: '/'
    
-  - name: 'Features'
-    title: 'Features'
-    link: '/features/'
+  - name: 'services'
+    title: 'services'
+    link: '/services/'
 
   - name: 'about'
     title: 'about'
