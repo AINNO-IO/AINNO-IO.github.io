@@ -3,9 +3,9 @@ header:
     title: 'Home'
     link: '/'
    
-  - name: 'services'
-    title: 'services'
-    link: '/services/'
+  - name: 'Features'
+    title: 'Features'
+    link: '/features/'
 
   - name: 'about'
     title: 'about'
@@ -18,4 +18,3 @@ header:
   - name: 'contact'
     title: 'contact'
     link: '/contact/'
-
