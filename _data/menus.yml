@@ -5,16 +5,16 @@ header:
    
   - name: 'Features'
     title: 'Features'
-    link: '/features/'
+    link: '/features'
 
-  - name: 'about'
-    title: 'about'
-    link: '/about/'
+  - name: 'About'
+    title: 'About'
+    link: '/about'
 
-  - name: 'pricing'
-    title: 'pricing'
-    link: '/pricing/'
+  - name: 'Pricing'
+    title: 'Pricing'
+    link: '/pricing'
 
-  - name: 'contact'
-    title: 'contact'
-    link: '/contact/'
+  - name: 'Contact'
+    title: 'Contact'
+    link: '/contact'
