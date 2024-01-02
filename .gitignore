@@ -9,3 +9,4 @@ Gemfile.lock
 
 
 .vercel
+.DS_Store
