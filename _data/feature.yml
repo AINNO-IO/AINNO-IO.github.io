@@ -4,14 +4,15 @@
 ####################################
 ######  feature Section   ######
 ####################################
+
+- image: 'img/feature/f12.png'
+  title: 'Development Services'
+  description: 'We create custom solutions that fit your needs. With over 10 years of experience, our team listens to what you want and delivers personalized solutions to meet your business goals, making sure everything runs smoothly.'
+
+- image: 'img/feature/f8.png'
+  title: 'AI Solutions'
+  description: 'Discover innovation with our ready-to-use AI solutions. We provide cutting-edge technology to enhance your operations, offering a range of pre-built AI solutions designed for immediate implementation and impact.'
+
 - image: 'img/feature/i1.png'
-  title: 'Collaboration'
-  description: 'Some days a motivational quote can provide a quick pick-me-up for employees and even  management.'
-
-- image: 'img/feature/i3.png'
-  title: 'Full of features'
-  description: 'Some days a motivational quote can provide a quick pick-me-up for employees and even management.'
-
-- image: 'img/feature/i4.png'
-  title: 'Global Framework'
-  description: 'Some days a motivational quote can provide a quick pick-me-up for employees and even management.'
+  title: 'IT Consultations'
+  description: 'Unlock your business potential with our diverse IT consultations. Whether it is AI-based insights, development strategies, system architecture, or computer networks, our expert consultants provide comprehensive solutions to guide and optimize your IT landscape.'

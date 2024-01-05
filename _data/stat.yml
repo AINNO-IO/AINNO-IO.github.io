@@ -1,32 +1,32 @@
 ####################################
 ######  Statistics Section    ######
 ####################################
-title: 'We glow with Our Statistics'
-description: 'The first is a non technical method which requires the use of adware removal software. Download free adware and spyware removal software and use advanced tools getting infected.'
+title: 'Showcasing Our Tailored Solutions'
+description: 'Explore our diverse portfolio, featuring cutting-edge solutions such as OCR, quality assurance for call centers, text-to-speech, and engaging puzzle applications. We take pride in delivering innovative, customized solutions that meet your unique business needs.'
 image: 'img/title-icon.png'
 
 # main big image
-start_image: 'img/stat/stat-img.png'
+start_image: 'img/stat/software-engineer_1.svg'
 
 # 4 section image
 statistics:
-  - image: 'img/stat/s1.png'
-    title: 'Productivity'
+  - image: 'img/stat/s6.png'
+    title: 'Document Recognizer'
     link: '#'
-    description: 'Making changes in your life is great and it is the way we grow and develop as people. Change is a constant.'
+    description: 'Extract data from PDF files or images seamlessly with our Intelligent Document Processing tool. Utilize advanced AI-based OCR technology to convert information and automate document processing.'
 
-  - image: 'img/stat/s2.png'
-    title: 'Sales Monitoring'
+  - image: 'img/stat/s7.png'
+    title: 'Call Centers Quality Assurance'
     link: '#'
-    description: 'Making changes in your life is great and it is the way we grow and develop as people. Change is a constant.'
+    description: ' Revolutionize your contact center with our Call Center QA. By transforming spoken words into text, our Call Analytics automates quality assurance, unlocks advanced speech analytics, and boosts efficiency and customer satisfaction.'
 
-  - image: 'img/stat/s2.png'
-    title: 'Payment Stats'
+  - image: 'img/stat/s9.png'
+    title: 'Read Aloud'
     link: '#'
-    description: 'Making changes in your life is great and it is the way we grow and develop as people. Change is a constant.'
+    description: 'Bring your words to life with our dynamic Text-to-Speech Synthesis tool – where cutting-edge technology meets natural, engaging vocal expression.'
 
-  - image: 'img/stat/s4.png'
-    title: 'Pending Clearnance'
+  - image: 'img/stat/s8.png'
+    title: 'Puzzle Connect: Unveil Colleagues in a Fun Challenge'
     link: '#'
-    description: 'Making changes in your life is great and it is the way we grow and develop as people. Change is a constant.'
+    description: 'Discover team members with puzzles revealing personal facts creatively. Connect effortlessly!'
     
