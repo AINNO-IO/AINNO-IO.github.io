@@ -5,13 +5,13 @@
 ######  feature Section   ######
 ####################################
 
-- image: 'img/feature/f12.png'
-  title: 'Development Services'
-  description: 'We create custom solutions that fit your needs. With over 10 years of experience, our team listens to what you want and delivers personalized solutions to meet your business goals, making sure everything runs smoothly.'
-
 - image: 'img/feature/f8.png'
   title: 'AI Solutions'
-  description: 'Discover innovation with our ready-to-use AI solutions. We provide cutting-edge technology to enhance your operations, offering a range of pre-built AI solutions designed for immediate implementation and impact.'
+  description: 'Discover innovation with our ready-to-use AI solutions or contact us for custom AI solutions that we will create for your personal business needs.'
+
+- image: 'img/feature/f12.png'
+  title: 'Digital Product Development'
+  description: 'Explore our diverse software development services, ranging from <b>no-code</b> and <b>low-code</b> solutions to <b>traditional stack</b> development. Tailored to your needs, we deliver versatile and efficient software solutions for your business.'
 
 - image: 'img/feature/i1.png'
   title: 'IT Consultations'

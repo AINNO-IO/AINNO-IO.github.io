@@ -3,17 +3,25 @@ header:
     title: 'Home'
     link: '/'
    
-  - name: 'Features'
-    title: 'Features'
-    link: '/features'
+  - name: 'Services'
+    title: 'Services'
+    link: '/Services'
+
+  - name: 'Solutions'
+    title: 'Solutions'
+    link: '/solutions'
+
+  # - name: 'Features'
+  #   title: 'Features'
+  #   link: '/features'
 
   - name: 'About'
     title: 'About'
     link: '/about'
 
-  - name: 'Pricing'
-    title: 'Pricing'
-    link: '/pricing'
+  # - name: 'Pricing'
+  #   title: 'Pricing'
+  #   link: '/pricing'
 
   - name: 'Contact'
     title: 'Contact'
