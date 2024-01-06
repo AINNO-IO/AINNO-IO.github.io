@@ -14,7 +14,8 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-6 pr-5">
-                    <div class="active-execution-carusel">
+                    <!-- <div class="active-execution-carusel"> -->
+                    <div>
                         {% for carusel in site.data.unique_feature.main_image_slider %}
                         <img class="img-fluid" src="{{ carusel['image'] | relative_url }}" alt="">
                         {% endfor %}

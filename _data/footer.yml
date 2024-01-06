@@ -5,29 +5,39 @@
 #####################################
 
 title: 'About Us'
-description: 'Welcome to AINNO. Specializing in custom AI, software development, and expert system architecture, we tailor solutions for your unique business needs, backed by over 10 years of excellence.'
+description: 'Specializing in custom AI, software development, we tailor solutions for your unique business needs, backed by over 10 years of excellence.'
 
-resources_link_heading: 'Resources'
+resources_link_heading: 'Services'
 resources_links: 
-  - text: 'Guides'
+  - text: 'Custom AI solutions'
     link: '#'
-  - text: 'Research'
+  - text: 'Digital Product Development'
     link: '#'
-  - text: 'Experts'
-    link: '#'
-  - text: 'Agencies'
+  - text: 'IT Consultations'
     link: '#'
 
-features_link_heading: 'Features'
+features_link_heading: 'Solutions'
 features_links:
-  - text: 'Guides'
+  - text: 'Document Recognizer'
     link: '#'
-  - text: 'Research'
+  - text: 'Read Aloud'
     link: '#'
-  - text: 'Experts'
+  - text: 'Call Centers QA'
     link: '#'
-  - text: 'Agencies'
+  - text: 'Puzzle Connect'
     link: '#'
+
+features_link_heading: 'Solutions'
+features_links:
+  - text: 'Document Recognizer'
+    link: '#'
+  - text: 'Read Aloud'
+    link: '#'
+  - text: 'Call Centers QA'
+    link: '#'
+  - text: 'Puzzle Connect'
+    link: '#'
+
 
 social_links:
   - name: "facebook"
@@ -38,11 +48,4 @@ social_links:
     link: '#'
     icon: "fab fa-dribbble"
 
-  - name: "dribbble"
-    link: '#'
-    icon: "fab fa-dribbble"
-
-  - name: "behance"
-    link: '#'
-    icon: "fab fa-behance"
 

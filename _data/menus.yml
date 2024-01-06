@@ -11,17 +11,9 @@ header:
     title: 'Solutions'
     link: '/solutions'
 
-  # - name: 'Features'
-  #   title: 'Features'
-  #   link: '/features'
-
   - name: 'About'
     title: 'About'
     link: '/about'
-
-  # - name: 'Pricing'
-  #   title: 'Pricing'
-  #   link: '/pricing'
 
   - name: 'Contact'
     title: 'Contact'

@@ -3,24 +3,28 @@
 ########## Unique Feature ###########
 #####################################
 
-title: 'Features that make us Stand Out'
+title: 'What makes us Stand Out'
 description: 'The first is a non technical method which requires the use of adware removal software. Download free adware and spyware removal software and use advanced tools getting infected.'
 image: 'img/title-icon.png' 
 
 main_image_slider: 
-  - image: 'img/carusel/c1.png'
-  - image: 'img/carusel/c2.png'
-  - image: 'img/carusel/c3.png'
+  - image: 'img/feature/business-meeting.svg'
 
 sections:
-- title: 'Certifications'
-  description: 'We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to day, also asks us to remain.'
-  image: http://127.0.0.1:4000/img/feature/f1.png
+
+- title: 'Expert Team'
+  description: 'Our success is driven by an in-house team of professionals, including certified developers, project managers, and AI experts. We ensure tailored solutions, effective project management, and cutting-edge AI integration for your success.'
+  image: /img/feature/f1.png
   link: '#'
 
-- title: 'Page Builder'
-  description: 'Vera sought out counseling with me because her doctor advised her to discover the emotional causes of her chronic fatigue.'
-  image: http://127.0.0.1:4000/img/feature/f2.png
+- title: 'Exceeding Expectations: Our Commitment to Excellence'
+  description: 'We pride ourselves on delivering reliable results, customized solutions, and unmatched customer satisfaction. Going the extra mile in every project, we consistently surpass expectations, ensuring your vision becomes a remarkable reality.'
+  image: /img/feature/guarantee.png
+  link: '#'
+
+- title: 'Transparent Pricing'
+  description: 'We understand the dislike for surprises in software development. Our transparent plans ensure promised results with clear costs, providing peace of mind.'
+  image: /img/feature/money-box.png
   link: '#'
 
 

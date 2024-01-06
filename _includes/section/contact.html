@@ -14,7 +14,8 @@
             </div>
             <div class="row justify-content-between align-items-start">
                 <div class="col-lg-6 col-md-6 contact-left">
-                    <div class="map-wrap relative" id="map"></div>
+                    <!-- <div class="map-wrap relative" id="map"></div> -->
+                    <div><img src="{{ site.data.contact.contact_image | relative_url }}" alt=""></div>
                     <span id="add-show" class="show-btn lnr lnr-chevron-right"></span>
                     <!-- <div class="contact-info">
                         <span id="add-hide" class="cross-btn lnr lnr-cross"></span>
@@ -48,6 +49,8 @@
                         </div>
                     </div> -->
                 </div>
+
+                
                 <div class="col-lg-5 col-md-6 contact-right">
                     <form id="myForm" class="form-area contact-form" action="getform.io/f/{{ site.getform_id }}" method="post">
                         <label for="">Your Name</label>
