@@ -6,13 +6,13 @@
 ####################################
 
 - image: 'img/feature/f8.png'
-  title: 'AI Solutions'
-  description: 'Discover innovation with our ready-to-use AI solutions or contact us for custom AI solutions that we will create for your personal business needs.'
+  title: 'AI Development'
+  description: 'From a strategy to full application. Unlock the potential of AI with our model customization, training, and precise implementation, tailored to enhance your business processes.'
 
 - image: 'img/feature/f12.png'
-  title: 'Digital Product Development'
-  description: 'Explore our diverse software development services, ranging from <b>no-code</b> and <b>low-code</b> solutions to <b>traditional stack</b> development. Tailored to your needs, we deliver versatile and efficient software solutions for your business.'
+  title: 'Customized Solutions'
+  description: 'Harness the power of custom software development across a spectrum of technologies, ensuring tailored solutions that perfectly align with your unique business requirements.'
 
 - image: 'img/feature/i1.png'
-  title: 'IT Consultations'
-  description: 'Unlock your business potential with our diverse IT consultations. Whether it is AI-based insights, development strategies, system architecture, or computer networks, our expert consultants provide comprehensive solutions to guide and optimize your IT landscape.'
+  title: 'No-Code, Low-Code Development'
+  description: 'Empower your business with self-service portals built on low-code platforms, ensuring swift delivery and seamless user experiences.'
