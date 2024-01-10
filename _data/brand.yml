@@ -1,25 +1,32 @@
+- image: 'img/brands/aws1.png'
+  link: 'https://aws.amazon.com'
+
+- image: 'img/brands/java1.png'
+  link: 'https://www.java.com/'
+
+- image: 'img/brands/postgre1.png'
+  link: 'https://www.postgresql.org/'
+
+- image: 'img/brands/python1.png'
+  link: 'https://www.python.org/'
+
+- image: 'img/brands/javascript1.png'
+  link: 'https://www.javascript.com/'
+
+- image: 'img/brands/react1.png'
+  link: 'https://react.dev/'
+
+- image: 'img/brands/bubble1.png'
+  link: 'https://bubble.io/'
+
+- image: 'img/brands/typescript1.png'
+  link: 'https://www.typescriptlang.org'
+
+- image: 'img/brands/azure1.png'
+  link: 'https://azure.microsoft.com/'
+
+- image: 'img/brands/openai1.png'
+  link: 'https://openai.com'
 
 - image: 'img/brands/docker1.png'
-  link: '#'
-- image: 'img/brands/java1.png'
-  link: '#'
-- image: 'img/brands/mysql1.png'
-  link: '#'
-- image: 'img/brands/python1.png'
-  link: '#'
-- image: 'img/brands/javascript1.png'
-  link: '#'
-- image: 'img/brands/react1.png'
-  link: '#'
-- image: 'img/brands/bubble1.png'
-  link: '#'
-- image: 'img/brands/typescript1.png'
-  link: '#'
-- image: 'img/brands/azure1.png'
-  link: '#'
-- image: 'img/brands/openai1.png'
-  link: '#'
-- image: 'img/brands/aws1.png'
-  link: '#'
-
-
+  link: 'https://www.docker.com'
