@@ -29,9 +29,7 @@ features_links:
 other_link_heading: 'Other'
 other_links:
   - text: 'Privacy Policy'
-    link: '#'
-  - text: 'FAQ'
-    link: '#'
+    link: '/privacy'
 
 
 
