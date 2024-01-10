@@ -5,29 +5,29 @@ title: 'Privacy Policy'
 image: 'img/title-icon.png'
 
 privacy_bulletpoints:
-  - title: 'Commitment to Privacy'
+  - bullet_title: 'Commitment to Privacy'
     text: 'AINNO ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy details our practices regarding the collection, use, and safeguarding of your personal data. Please review it thoroughly to understand our approach to data protection.'
   
-  - title: 'Data Controller'
+  - bullet_title: 'Data Controller'
     text: 'MB AI Sprendimai, operating under the trade name AINNO and located at Laisvės g. 13-1, Bukiškis, Vilniaus r., is the data controller for your personal information in relation to your interactions with our website at www.ainno.io ("Website"). For any questions or requests concerning your personal data, please contact us via email: tomas@ainno.io.'
  
-  - title: 'Collection and Use of Personal Data'
+  - bullet_title: 'Collection and Use of Personal Data'
     text: 'We collect and process personal data for specific purposes. This notice explains what data we collect, under what circumstances, and the legal grounds for processing.'
   
-  - title: 'Contact Information'
+  - bullet_title: 'Contact Information'
     text: 'When you reach out to us through our contact page on the Website or at tomas@ainno.io, we collect your name, email address, affiliation, position, and the content of your message. We process this data to explore partnership opportunities, manage communications, and address your inquiries, based on our legitimate interest in effective communication and inquiry resolution.'
  
-  - title: 'Analytics and Cookies'
+  - bullet_title: 'Analytics and Cookies'
     text: 'We utilize Google Analytics to understand how visitors engage with our Website. This service uses cookies to collect anonymous traffic data. Consent governs the use of cookies; you can manage your preferences at http://www.youronlinechoices.com/ and opt-out of Google Analytics at https://tools.google.com/dlpage/gaoptout/.'
  
-  - title: 'Data Sharing and Transfer'
+  - bullet_title: 'Data Sharing and Transfer'
     text: 'We maintain strict confidentiality and security standards, limiting access to your personal data to those employees and service providers who need it to perform their duties. Data may be shared with public authorities when legally required. Additionally, data transfers to countries outside the EU, such as the United States, including to entities like Google LLC, comply with legal frameworks ensuring an adequate level of data protection.'
  
- - title: 'Retention of Data'
+  - bullet_title: 'Retention of Data'
     text: 'Personal data collected through inquiries is retained until the matter is resolved and for a subsequent year. Statistical data collected via cookies are kept for no longer than three years. Specific cookies may persist from 24 hours up to 24 months. We may retain information longer if required by law or to defend our legitimate interests.'
  
-  - title: 'Your Rights'
+  - bullet_title: 'Your Rights'
     text: 'Under GDPR, you have the right to access, correct, delete, restrict, or object to our processing of your data. You can exercise these rights by contacting us at tomas@ainno.io. Should you have concerns about our data handling practices, you are entitled to lodge a complaint with the relevant data protection authority.'
 
-  - title: 'Policy Updates'
+  - bullet_title: 'Policy Updates'
     text: 'We may update this Privacy Policy to reflect changes in our data processing activities. Please review this policy periodically for the latest information on our privacy practices.'
