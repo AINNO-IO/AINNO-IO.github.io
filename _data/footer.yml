@@ -18,13 +18,13 @@ resources_links:
 features_link_heading: 'Solutions'
 features_links:
   - text: 'Document Recognizer'
-    link: '#'
+    link: '/document-recognizer'
   - text: 'Read Aloud'
-    link: '#'
+    link: '/read-aloud'
   - text: 'Call Centers QA'
-    link: '#'
+    link: '/call-centers-qa'
   - text: 'Puzzle Connect'
-    link: '#'
+    link: '/puzzle'
 
 other_link_heading: 'Other'
 other_links:

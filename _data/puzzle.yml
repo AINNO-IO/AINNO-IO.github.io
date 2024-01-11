@@ -1,0 +1,9 @@
+####################################
+######  Puzzle Connect Section   ######
+####################################
+title: 'Puzzle Connect'
+description: '<b>Welcome to Team Puzzle Challenge!</b> 🧩<br>Embark on a new era of team bonding with our Team Puzzle Challenge app.<br><br>🔗 <b>How It Works:</b><br>- Receive a unique link.<br>- Piece together a puzzle of a new colleague`s picture.<br>- Uncover interesting facts about them!<br><br>🌟 <b>Why Team Puzzle Challenge?</b><br>- Forge Connections: Strengthen ties within your team.<br>- Interactive Onboarding: Discover while you solve.<br>- Boost Morale: Elevate team spirit with a dash of fun.<br><br>🚀 <b>Get Started:</b><br>Click the link and reveal the story behind each puzzle piece. Let the Team Puzzle Challenge redefine your team bonding!'
+image_one: '/img/marketing/developer-team.svg'
+# image_two: '/img/marketing/developer-team.svg'
+btn_text: 'Try it'
+btn_link: '/contact'

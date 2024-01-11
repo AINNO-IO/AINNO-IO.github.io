@@ -1,0 +1,9 @@
+####################################
+######  Document Recognizer Section   ######
+####################################
+title: 'Document Recognizer'
+description: '<b>Unlock Secure Document Recognition!</b> 🛡️🔒<br>Elevate your document management experience with our Document Recognizer, the AI-driven solution that ensures both efficiency and confidentiality.<br><br>🌐 <b>How It Ensures Security:</b><br>- Private Azure Account Integration: Benefit from the power of Azure while keeping everything within your secure corporate environment.<br>- Data Confidentiality: Documents never leave your system, maintaining utmost privacy and compliance.<br><br>🔐 <b>Why Document Recogniser?</b><br>- Efficient Data Extraction: Seamlessly transform documents into digitized, actionable data.<br>- Integration Capabilities: Connect directly with financial tools for automated data input.<br>- Flexibility in Output: Export results in Excel or CSV formats for versatile usage.<br><br>🚀 <b>Elevate Your Document Management:</b><br>Transform your documents with confidence, knowing your data stays within the protective confines of your private Azure account.'
+image_one: '/img/marketing/developer-team.svg'
+# image_two: '/img/marketing/developer-team.svg'
+btn_text: 'Try it'
+btn_link: '/contact'
