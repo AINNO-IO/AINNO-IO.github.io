@@ -3,10 +3,6 @@ header:
     title: 'Home'
     link: '/'
    
-  - name: 'Services'
-    title: 'Services'
-    link: '/Services'
-
   - name: 'Solutions'
     title: 'Solutions'
     link: '/solutions'
