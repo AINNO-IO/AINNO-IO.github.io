@@ -22,7 +22,7 @@ statistics:
 
   - image: 'img/stat/s9.png'
     title: 'Read Aloud'
-    link: '#'
+    link: 'https://garseja.lt/'
     description: 'Bring your words to life with our dynamic Text-to-Speech Synthesis tool – where cutting-edge technology meets natural, engaging vocal expression.'
 
   - image: 'img/stat/s8.png'

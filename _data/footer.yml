@@ -20,7 +20,7 @@ features_links:
   - text: 'Document Recognizer'
     link: '/document-recognizer'
   - text: 'Read Aloud'
-    link: '/read-aloud'
+    link: 'https://garseja.lt'
   - text: 'Call Centers QA'
     link: '/call-centers-qa'
   - text: 'Puzzle Connect'
