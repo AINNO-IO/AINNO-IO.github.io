@@ -19,7 +19,7 @@ features_link_heading: 'Solutions'
 features_links:
   - text: 'Document Recognizer'
     link: '/document-recognizer'
-  - text: 'Read Aloud'
+  - text: 'GARSĖJA'
     link: 'https://garseja.lt'
   - text: 'Call Centers QA'
     link: '/call-centers-qa'
