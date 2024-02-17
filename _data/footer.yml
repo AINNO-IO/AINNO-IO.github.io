@@ -23,8 +23,8 @@ features_links:
     link: 'https://garseja.lt'
   - text: 'Call Centers QA'
     link: '/call-centers-qa'
-  - text: 'Puzzle Connect'
-    link: '/puzzle'
+  # - text: 'Puzzle Connect'
+  #   link: '/puzzle'
 
 other_link_heading: 'Other'
 other_links:

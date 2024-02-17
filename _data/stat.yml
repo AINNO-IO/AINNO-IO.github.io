@@ -25,8 +25,8 @@ statistics:
     link: 'https://garseja.lt/'
     description: 'Bring your words to life with our dynamic Text-to-Speech Synthesis tool garseja.lt'
 
-  - image: 'img/stat/s8.png'
-    title: 'Puzzle Connect: Unveil Colleagues in a Fun Challenge'
-    link: '/puzzle'
-    description: 'Discover team members with puzzles revealing personal facts creatively. Connect effortlessly!'
+  # - image: 'img/stat/s8.png'
+  #   title: 'Puzzle Connect: Unveil Colleagues in a Fun Challenge'
+  #   link: '/puzzle'
+  #   description: 'Discover team members with puzzles revealing personal facts creatively. Connect effortlessly!'
     
