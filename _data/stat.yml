@@ -12,12 +12,12 @@ start_image: 'img/stat/software-engineer_1.svg'
 statistics:
   - image: 'img/stat/s6.png'
     title: 'Document Recognizer'
-    link: '#'
+    link: '/document-recognizer'
     description: 'Extract data from PDF files or images seamlessly with our Intelligent Document Processing tool. Utilize advanced AI-based OCR technology to convert information and automate document processing.'
 
   - image: 'img/stat/s7.png'
     title: 'Call Centers Quality Assurance'
-    link: '#'
+    link: '/call-centers-qa'
     description: ' Revolutionize your contact center with our Call Center QA. By transforming spoken words into text, our Call Analytics automates quality assurance, unlocks advanced speech analytics, and boosts efficiency and customer satisfaction.'
 
   - image: 'img/stat/s9.png'
@@ -27,6 +27,6 @@ statistics:
 
   - image: 'img/stat/s8.png'
     title: 'Puzzle Connect: Unveil Colleagues in a Fun Challenge'
-    link: '#'
+    link: '/puzzle'
     description: 'Discover team members with puzzles revealing personal facts creatively. Connect effortlessly!'
     
