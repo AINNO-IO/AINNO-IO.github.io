@@ -16,9 +16,9 @@ statistics:
     description: 'Extract data from PDF files or images seamlessly with our Intelligent Document Processing tool. Utilize advanced AI-based OCR technology to convert information and automate document processing.'
 
   - image: 'img/stat/s7.png'
-    title: 'Call Centers Quality Assurance'
-    link: '/call-centers-qa'
-    description: ' Revolutionize your contact center with our Call Center QA. By transforming spoken words into text, our Call Analytics automates quality assurance, unlocks advanced speech analytics, and boosts efficiency and customer satisfaction.'
+    title: 'Image Recognition Solutions'
+    link: '/image-recognition-solutions'
+    description: 'Revolutionize Visual Recognition with AI. Tired of manual visual inspection? Our AI-powered image recognition solutions automate human visual tasks with speed, accuracy, and efficiency. From defect detection to process automation, we help businesses streamline operations and reduce costs.'
 
   - image: 'img/stat/s9.png'
     title: 'GARSĖJA'
