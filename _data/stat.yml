@@ -15,7 +15,7 @@ statistics:
     link: '/document-recognizer'
     description: 'Extract data from PDF files or images seamlessly with our Intelligent Document Processing tool. Utilize advanced AI-based OCR technology to convert information and automate document processing.'
 
-  - image: 'img/stat/s7.png'
+  - image: 'img/stat/s6.png'
     title: 'Image Recognition Solutions'
     link: '/image-recognition-solutions'
     description: 'Revolutionize Visual Recognition with AI. Tired of manual visual inspection? Our AI-powered image recognition solutions automate human visual tasks with speed, accuracy, and efficiency. From defect detection to process automation, we help businesses streamline operations and reduce costs.'
