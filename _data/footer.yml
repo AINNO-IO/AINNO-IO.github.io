@@ -21,8 +21,8 @@ features_links:
     link: '/document-recognizer'
   - text: 'GARSĖJA'
     link: 'https://garseja.lt'
-  - text: 'Call Centers QA'
-    link: '/call-centers-qa'
+  - text: 'Image Recognition Solutions'
+    link: '/image-recognition-solutions'
   # - text: 'Puzzle Connect'
   #   link: '/puzzle'
 
