@@ -1,0 +1,39 @@
+tech_heading: 'Technologijos ir įrankiai'
+# simple-icons slug + hex (be #). Ikonos per Iconify API. Žr. https://simpleicons.org/
+tech_items:
+  - name: 'Microsoft Azure'
+    simpleicon: microsoftazure
+    color: '0078D4'
+  - name: 'AWS'
+    simpleicon: amazonaws
+    color: 'FF9900'
+  - name: 'Python'
+    simpleicon: python
+    color: '3776AB'
+  - name: 'Java'
+    simpleicon: openjdk
+    color: '437291'
+  - name: 'TypeScript'
+    simpleicon: typescript
+    color: '3178C6'
+  - name: 'Node.js'
+    simpleicon: nodedotjs
+    color: '5FA04E'
+  - name: 'Docker'
+    simpleicon: docker
+    color: '2496ED'
+  - name: 'PostgreSQL'
+    simpleicon: postgresql
+    color: '4169E1'
+  - name: 'MongoDB'
+    simpleicon: mongodb
+    color: '47A248'
+  - name: 'Redis'
+    simpleicon: redis
+    color: 'FF4438'
+  - name: 'OpenAI'
+    simpleicon: openai
+    color: '412991'
+  - name: 'REST / API'
+    simpleicon: swagger
+    color: '85EA2D'

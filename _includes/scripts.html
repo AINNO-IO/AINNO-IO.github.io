@@ -21,3 +21,35 @@
     <script src="{{ 'js/owl.carousel.min.js' | relative_url }}"></script>
     <script src="{{ 'js/contact-script.js' | relative_url }}"></script>
     <script src="{{ 'js/main.js' | relative_url }}"></script>
+
+    <script>
+      // Ensure Bootstrap toggler icon is visible without extra images.
+      (function () {
+        var togglers = document.querySelectorAll('.navbar-toggler');
+        for (var i = 0; i < togglers.length; i++) {
+          var t = togglers[i];
+          if (!t.querySelector('.navbar-toggler-icon')) continue;
+          t.querySelector('.navbar-toggler-icon').style.backgroundImage =
+            "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(15,23,42,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e\")";
+        }
+      })();
+    </script>
+    <script>
+      (function () {
+        var nav = document.querySelector('.ainno-navbar');
+        if (!nav) return;
+        var ticking = false;
+        function update() {
+          ticking = false;
+          nav.classList.toggle('ainno-navbar--scrolled', window.scrollY > 12);
+        }
+        function onScroll() {
+          if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(update);
+          }
+        }
+        update();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+    </script>

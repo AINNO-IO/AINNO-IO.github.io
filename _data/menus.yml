@@ -1,16 +1,8 @@
 header:
   - name: 'home'
-    title: 'Home'
+    title: 'Pradžia'
     link: '/'
-   
-  - name: 'Solutions'
-    title: 'Solutions'
-    link: '/solutions'
 
-  - name: 'About'
-    title: 'About'
-    link: '/about'
-
-  - name: 'Contact'
-    title: 'Contact'
+  - name: 'contact'
+    title: 'Kontaktai'
     link: '/contact'

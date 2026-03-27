@@ -6,13 +6,13 @@
 ####################################
 
 - image: 'img/feature/f8.png'
-  title: 'AI Development'
-  description: 'From a strategy to full application. Unlock the potential of AI with our model customization, training, and precise implementation, tailored to enhance your business processes.'
+  title: 'AI'
+  description: 'Modeliai ir integracijos jūsų verslui.'
 
 - image: 'img/feature/f12.png'
-  title: 'Customized Solutions'
-  description: 'Harness the power of custom software development across a spectrum of technologies, ensuring tailored solutions that perfectly align with your unique business requirements.'
+  title: 'Custom sprendimai'
+  description: 'Programa ir API pagal poreikius.'
 
 - image: 'img/feature/i1.png'
-  title: 'No-Code, Low-Code Development'
-  description: 'Empower your business with self-service portals built on low-code platforms, ensuring swift delivery and seamless user experiences.'
+  title: 'Low-code'
+  description: 'Portalai ir vidiniai įrankiai greičiau.'

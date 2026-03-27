@@ -1,0 +1,26 @@
+<section id="ai-value" class="ainno-section">
+    <div class="container ainno-container">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="ainno-section-heading">
+                    <div class="ainno-section-heading-icon" aria-hidden="true"><i class="{{ site.data.ai_value.icon_class }}"></i></div>
+                    <div>
+                        <h2>{{ site.data.ai_value.title }}</h2>
+                        <p class="section-lead mb-0">{{ site.data.ai_value.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for card in site.data.ai_value.cards %}
+            <div class="col-md-6 col-lg-3 mt-3">
+                <div class="ainno-card h-100 ainno-card-interactive ainno-value-card">
+                    <div class="ainno-value-card-icon" aria-hidden="true"><i class="{{ card.icon }}"></i></div>
+                    <div style="font-weight: 900; font-size: 16px; margin-bottom: 8px; color: #0b1020;">{{ card.title }}</div>
+                    <div style="color: #64748b; font-size: 14px; line-height: 1.5;">{{ card.description }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

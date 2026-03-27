@@ -1,9 +1,8 @@
 ####################################
 ######  marketing Section   ######
 ####################################
-title: 'Digital Product Development'
-description: 'Our offerings include software development services with no code, low code or traditional stack to help you launch and scale quickly. Additionally, we provide continuous support for seamless integration and optimal performance of our solutions. From idea through launch and beyond, we’re with you at every step'
+title: 'Produktų kūrimas'
+description: 'Nuo idėjos iki paleidimo – su jumis visame kelyje.'
 image_one: '/img/marketing/developer-team.svg'
-# image_two: '/img/marketing/developer-team.svg'
-btn_text: 'Contact us'
+btn_text: 'Susisiekti'
 btn_link: '/contact'

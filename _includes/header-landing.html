@@ -1,47 +1,29 @@
-    <!-- start Header Area -->
-    <header id="header" >
-        <div class="container-fluid">
-            <div  class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <div id="logo"  class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                    <a href="/">
-                        <img class="logo-1" src="{{ 'img/logo.png' | relative_url }}" alt="" title="" />
-                    </a>
-                    <a href="/">
-                        <img class="logo-2" src="{{ 'img/logo.png' | relative_url }}" alt="" title="" />
-                    </a>
+    <header class="ainno-navbar">
+        <div class="container ainno-container">
+            <nav class="navbar navbar-expand-lg py-3 px-0">
+                <a class="navbar-brand ainno-logo" href="{{ '/' | relative_url }}">
+                    <img src="{{ 'img/logo.png' | relative_url }}" alt="AINNO" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ainnoNav"
+                    aria-controls="ainnoNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="ainnoNav">
+                    <ul class="navbar-nav ml-auto align-items-lg-center">
+                        {%- for menu in site.data.menus.header -%}
+                        <li class="nav-item">
+                            <a class="nav-link px-lg-3" href="{{ menu.link | relative_url }}">{{ menu.title }}</a>
+                        </li>
+                        {%- endfor -%}
+                        <li class="nav-item mt-3 mt-lg-0 ml-lg-2">
+                            <a class="ainno-btn ainno-btn-primary" href="{{ site.data.hero.nav_cta_link | relative_url }}">{{ site.data.hero.nav_cta_text }}</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="nav-wrap d-flex flex-row align-items-center">
-                    <nav id="nav-menu-container">
-                        <ul class="nav-menu">
-                            <!-- <li class="menu-has-children"> -->
-                            <li>
-                                <a href="{{ '/#' | relative_url }}">Home</a>
-                            </li>
-                            <!-- <li>
-                                <a href="{{ '/#services' | relative_url }}">Services</a>
-                            </li> -->
-                            <li>
-                                <a href="{{ '/#solutions' | relative_url }}">Solutions</a>
-                            </li>
-                            <!-- <li>
-                                <a href="{{ '/#pricing' | relative_url }}">Pricing</a>
-                            </li> -->
-                            <li>
-                                <a href="{{ 'about' | relative_url }}">About</a>
-                            </li>
-                            <li>
-                                <a href="{{ 'contact' | relative_url }}">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- <div>
-                    <a class="genric-btn" href="{{ site.request-demo }}">Free trial</a>
-                </div> -->
-                <!-- #nav-menu-container -->
-            </div>
+            </nav>
         </div>
     </header>
-    <!-- End Header Area -->
 
 

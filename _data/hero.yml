@@ -1,12 +1,20 @@
 
-# sass [ only one image ]
-sass_name: 'Unlocking Potential <br> with AI'
-sass_text: 'Experience the transformation with our professional custom AI and development solutions. With over 10 years of expertise in development and system administration, we seamlessly blend innovation with precision. Unlock unparalleled potential for your business and elevate your operations with our AI excellence.'
+# sass [ landing hero – see _includes/hero.html ]
+# sass_eyebrow: optional uppercase line above H1
+sass_name: 'Automatizuojame jūsų verslo procesus su AI<br><span class="ainno-hero-h1-accent">Sutaupykite iki 30–70% laiko per 30 dienų</span>'
+sass_text: 'Išanalizuojame procesus nemokamai, sukuriame veikiantį MVP, ir tik tada sprendžiate ar verta diegti.'
+sass_bullets:
+  - 'Be rizikos – mokate tik jei veikia'
+  - 'MVP per 1–2 savaites'
+  - 'Integruojame su jūsų esamomis sistemomis'
+sass_trust_below_cta: 'Per 24h susisieksime ir įvertinsime jūsų procesus'
 sass_image: 'img/hero/hero-img.png'
-sass_btn_one_link: '#services'
-sass_btn_one_text:  ' Services '
-sass_btn_two_link: '#solutions'
-sass_btn_two_text: 'Solutions'
+sass_btn_one_link: '/#contact'
+sass_btn_one_text: 'Gauti nemokamą procesų analizę'
+sass_btn_two_link: '/#kaip-dirbame'
+sass_btn_two_text: 'Kaip dirbame'
+nav_cta_text: 'Gauti nemokamą procesų analizę'
+nav_cta_link: '/#contact'
 
 # saas_video [ video type mp4 ]
 saas_video_name: 'We Made our <br> Software 100% Errorless' 

@@ -1,32 +1,24 @@
 ####################################
 ######  Statistics Section    ######
 ####################################
-title: 'Showcasing Our Tailored Solutions'
-description: 'Explore our diverse portfolio, featuring cutting-edge solutions such as OCR, quality assurance for call centers, text-to-speech, and engaging puzzle applications. We take pride in delivering innovative, customized solutions that meet your unique business needs.'
+title: 'Ką darome'
+description: 'Individualūs sprendimai – nuo DEMO iki gamybos.'
 image: 'img/title-icon.png'
 
-# main big image
 start_image: 'img/stat/software-engineer_1.svg'
 
-# 4 section image
 statistics:
   - image: 'img/stat/s6.png'
-    title: 'Document Recognizer'
-    link: '/document-recognizer'
-    description: 'Extract data from PDF files or images seamlessly with our Intelligent Document Processing tool. Utilize advanced AI-based OCR technology to convert information and automate document processing.'
+    title: 'AI ir automatizavimas'
+    link: '/contact'
+    description: 'Modeliai ir integracijos pagal jūsų procesus.'
 
   - image: 'img/stat/s6.png'
-    title: 'Image Recognition Solutions'
-    link: '/image-recognition-solutions'
-    description: 'Revolutionize Visual Recognition with AI. Tired of manual visual inspection? Our AI-powered image recognition solutions automate human visual tasks with speed, accuracy, and efficiency. From defect detection to process automation, we help businesses streamline operations and reduce costs.'
+    title: 'Nemokamas DEMO'
+    link: '/contact'
+    description: 'Pirmiausia parodome prototipą – tada sprendžiate.'
 
   - image: 'img/stat/s9.png'
-    title: 'GARSĖJA'
-    link: 'https://garseja.lt/'
-    description: 'Bring your words to life with our dynamic Text-to-Speech Synthesis tool garseja.lt'
-
-  # - image: 'img/stat/s8.png'
-  #   title: 'Puzzle Connect: Unveil Colleagues in a Fun Challenge'
-  #   link: '/puzzle'
-  #   description: 'Discover team members with puzzles revealing personal facts creatively. Connect effortlessly!'
-    
+    title: 'Kaina ir terminai'
+    link: '/#kainodara'
+    description: 'Skaidrūs etapai – žinote, ką gaunate.'

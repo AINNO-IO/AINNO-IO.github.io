@@ -1,5 +1,6 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var dartSass = require('sass');
+var sass = require('gulp-sass')(dartSass);
 var cssnano = require('cssnano');
 var autoprefixer = require('autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
@@ -33,7 +34,7 @@ function jekyllBuild() {
 function style() {
   return gulp.src(paths.styles.src)
     .pipe(sass({
-      includePaths: ['scss'],
+      loadPaths: ['scss'],
       outputStyle: 'expanded',
       onError: browserSync.notify
     }))

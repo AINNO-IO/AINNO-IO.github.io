@@ -3,43 +3,28 @@
 ##########     footer      ###########
 #####################################
 
-title: 'Contact Us'
+title: 'MB AI Sprendimai'
 description: 'info@ainno.io'
+company_name: 'MB AI Sprendimai'
+company_code: '306416097'
+company_email: 'info@ainno.io'
+rekvizitai_url: 'https://rekvizitai.vz.lt/imone/ai_sprendimai/'
+rekvizitai_label: 'Rekvizitai įmonės profilis'
 
-resources_link_heading: 'Services'
-resources_links: 
-  - text: 'Custom AI solutions'
-    link: '#'
-  - text: 'Digital Product Development'
-    link: '#'
-  - text: 'IT Consultations'
-    link: '#'
+resources_link_heading: 'Nuorodos'
+resources_links:
+  - text: 'AI vertė'
+    link: '/#ai-value'
+  - text: 'Kainodara'
+    link: '/#kainodara'
+  - text: 'Kaip dirbame'
+    link: '/#kaip-dirbame'
+  - text: 'Kontaktai'
+    link: '/contact'
 
-features_link_heading: 'Solutions'
-features_links:
-  - text: 'Document Recognizer'
-    link: '/document-recognizer'
-  - text: 'GARSĖJA'
-    link: 'https://garseja.lt'
-  - text: 'Image Recognition Solutions'
-    link: '/image-recognition-solutions'
-  # - text: 'Puzzle Connect'
-  #   link: '/puzzle'
-
-other_link_heading: 'Other'
-other_links:
-  - text: 'Privacy Policy'
+legal_link_heading: 'Teisinė informacija'
+legal_links:
+  - text: 'Privatumo politika'
     link: '/privacy'
-
-
-
-social_links:
-  - name: "facebook"
-    link: '#'
-    icon: "fab fa-facebook-f"
-
-  - name: "dribbble"
-    link: '#'
-    icon: "fab fa-dribbble"
-
-
+  - text: 'Slapukų politika'
+    link: '/cookies'

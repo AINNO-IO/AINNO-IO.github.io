@@ -1,0 +1,26 @@
+<section id="kainodara" class="ainno-section">
+    <div class="container ainno-container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="ainno-card ainno-pricing-teaser ainno-pricing-teaser--centered ainno-card-interactive">
+                    <div class="ainno-section-heading mb-3">
+                        <div class="ainno-section-heading-icon" aria-hidden="true"><i class="{{ site.data.pricing_teaser.icon_class }}"></i></div>
+                        <div>
+                            <h2 class="mb-2">{{ site.data.pricing_teaser.title }}</h2>
+                        </div>
+                    </div>
+                    <p class="section-lead mb-2">{{ site.data.pricing_teaser.intro }}</p>
+                    <p class="ainno-pricing-teaser-sub mb-2">{{ site.data.pricing_teaser.sub_intro }}</p>
+                    <ul class="ainno-pricing-teaser-list">
+                        {% for p in site.data.pricing_teaser.points %}
+                        <li><i class="fa fa-check" aria-hidden="true"></i> {{ p }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div class="ainno-pricing-teaser-cta">
+                        <a class="ainno-btn ainno-btn-primary ainno-btn-lg" href="{{ site.data.pricing_teaser.cta_link | relative_url }}">{{ site.data.pricing_teaser.cta_text }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

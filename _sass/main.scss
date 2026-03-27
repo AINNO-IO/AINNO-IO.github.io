@@ -119,4 +119,8 @@ Font-Family 	:	'Open Sans', sans-serif;
 
 @import "base/sidebar";
 
+// Keeps gulp sass watch triggering when we update partials.
+// Also forces recompilation on strict Dart Sass versions.
+// Trigger for local verification.
+
 

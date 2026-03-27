@@ -1,0 +1,14 @@
+title: 'Slapukų politika'
+lead: 'Kaip naudojame slapukus ir panašias technologijas svetainėje ainno.io.'
+
+sections:
+  - heading: 'Kas yra slapukai'
+    body: 'Slapukai – maži tekstiniai failai naršyklėje, padedantys svetainei veikti ar rinkti anoniminę statistiką.'
+  - heading: 'Kokius slapukus naudojame'
+    body: 'Gali būti techniškai būtini slapukai (sesija, saugumas) ir, jei įjungta, analitikos slapukai (pvz. anoniminiai srauto duomenys).'
+  - heading: 'Jūsų pasirinkimas'
+    body: 'Slapukus galite valdyti naršyklės nustatymuose. Išjungus tam tikrus slapukus, dalis funkcijų gali veikti ribotai.'
+  - heading: 'Trečiųjų šalių įrankiai'
+    body: 'Jei naudojame analitiką (pvz. Google Analytics), taikomos atitinkamos paslaugų teikėjų politikos; duomenys dažniausiai anoniminiai.'
+  - heading: 'Kontaktai'
+    body: 'Klausimais dėl slapukų: info@ainno.io.'

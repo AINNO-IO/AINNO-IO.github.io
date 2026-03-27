@@ -3,17 +3,15 @@
 ######     Global start     ######
 ####################################
 name                : 'AINNO'
-title               : 'AINNO - AI Solutions'
+title               : 'AINNO – AI ir programinė įranga'
 email               : info@ainno.io
 address             : 'ainno.io '
 phone               : 0000000000
-tagline             : 'AI Solutions' 
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+tagline             : 'AI verslui'
+description: >-
+  AI ir custom programinė įranga. Nemokamas DEMO, aiškūs etapai. MB AI Sprendimai.
 baseurl             : "" # the subpath of your site, e.g. /blog
-url                 : "https://softdash.jekylltemplate.com" #  7277783  the base hostname & protocol for your site, e.g. http://example.com
+url                 : "https://ainno.io"
 favicon: 'img/favicon.png'
 
 paginate: 12
@@ -77,8 +75,6 @@ whitelist:
 ####################################
 
 
-getform_id:  'e8febd62-b87a-4fd8-9e50-41cb4f474bd7' # active contact https://getform.io/f/1234
-
 mailchimp:
   user-id: 
   list-id: 
@@ -86,7 +82,6 @@ mailchimp:
 ####################################
 ######        Copyright       ######
 ####################################
-copyright_text: Copyright © 2024 All rights reserved to
 company_url: 'https://ainno.io'
 
 

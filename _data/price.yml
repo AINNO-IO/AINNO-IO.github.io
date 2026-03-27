@@ -3,41 +3,33 @@
 #####################################
 ########## Pricing Tables ###########
 #####################################
-pricing_table_title: 'Select your Best Pricing'
-pricing_table_description: "The first is a non technical method which requires the use of adware removal software. Download free adware and spyware removal software and use advanced tools getting infected. "
+pricing_table_title: 'Kainodara'
+pricing_table_description: 'Pirmiausia DEMO nemokamai. Toliau – pagal apimtį ir sutartį.'
 
-# Personal Plan
-plan_starter_name: starter
-plan_starter_tagline: Small business holders
-plan_starter_price: '<span>£29</span>/mo'
-plan_starter_description: '<li>02 Users permitted</li>
-                                <li>Unlimited Styles for interface</li>
-                                <li>New Update Available</li>'
-plan_starter_url: '#'
-plan_starter_btn_text: 'Get Started'
+plan_starter_name: Aptarimas
+plan_starter_tagline: Pradžia
+plan_starter_price: 'Nemokamai'
+plan_starter_description: '<li>Trumpas pokalbis apie užduotį</li>
+                                <li>Preliminarus planas</li>'
+plan_starter_url: '/contact'
+plan_starter_btn_text: 'Rašyti'
 
-# Team Plan
-plan_standard_name: standard
-plan_standard_tagline: Small business holders
-plan_standard_price: '<span>£49</span>/mo'
-plan_standard_description: ' <li>05 Users permitted</li>
-                                <li>Unlimited Styles for interface</li>
-                                <li>New Update Available</li>'
-plan_standard_url: '#'
-plan_standard_btn_text: 'Get Started'
+plan_standard_name: MVP / DEMO
+plan_standard_tagline: Be rizikos
+plan_standard_price: '0 €'
+plan_standard_description: ' <li>Veikiantis prototipas</li>
+                                <li>Galite įvertinti prieš perkant</li>'
+plan_standard_url: '/contact'
+plan_standard_btn_text: 'Užsakyti DEMO'
 
 
-# business Plan
-plan_business_name: premium
-plan_business_tagline: Small business holders
-plan_business_price: '<span>£99</span>/mo'
-plan_business_description: '<span>£99</span>/mo'
-plan_business_description: ' <li>Unlimited Users permitted</li>
-                                <li>Unlimited Styles for interface</li>
-                                <li>New Update Available</li>'
+plan_business_name: Gamyba
+plan_business_tagline: Pilnas sprendimas
+plan_business_price: 'Pagal sutartį'
+plan_business_description: ' <li>Įgyvendinimas ir integracijos</li>
+                                <li>Palaikymas pagal susitarimą</li>'
 
-plan_business_url: '#'
-plan_business_btn_text: 'Get Started'
-
+plan_business_url: '/contact'
+plan_business_btn_text: 'Susisiekti'
 
 

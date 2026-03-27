@@ -1,0 +1,27 @@
+{% if site.data.tech_stack.tech_items %}
+<section id="technologijos" class="ainno-section ainno-section--alt">
+    <div class="container ainno-container">
+        <div class="text-center font-weight-bold mb-3 ainno-tech-heading">{{ site.data.tech_stack.tech_heading }}</div>
+        <div class="ainno-tech-strip">
+            {% for t in site.data.tech_stack.tech_items %}
+            <div class="ainno-tech-pill">
+                {% if t.simpleicon %}
+                {% assign _c = t.color | default: '000000' %}
+                <img class="ainno-tech-brand-icon"
+                    src="https://api.iconify.design/simple-icons:{{ t.simpleicon }}.svg?color=%23{{ _c }}"
+                    width="22"
+                    height="22"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer">
+                {% elsif t.icon %}
+                <span class="ainno-tech-pill-icon" aria-hidden="true"><i class="{{ t.icon }}"></i></span>
+                {% endif %}
+                <span>{{ t.name }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

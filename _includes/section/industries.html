@@ -1,0 +1,30 @@
+<section id="industrijos" class="ainno-section ainno-section--alt">
+    <div class="container ainno-container">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="ainno-section-heading">
+                    <div class="ainno-section-heading-icon" aria-hidden="true"><i class="{{ site.data.industries.icon_class }}"></i></div>
+                    <div>
+                        <h2>{{ site.data.industries.title }}</h2>
+                        <p class="section-lead mb-0">{{ site.data.industries.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for item in site.data.industries.items %}
+            <div class="col-md-6 mt-3">
+                <div class="ainno-card h-100 ainno-card-interactive ainno-industry-card">
+                    <div class="ainno-industry-card__row">
+                        <div class="ainno-industry-icon" aria-hidden="true"><i class="{{ item.icon }}"></i></div>
+                        <div class="ainno-industry-body">
+                            <div class="ainno-industry-title">{{ item.title }}</div>
+                            <div class="ainno-industry-desc">{{ item.description }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

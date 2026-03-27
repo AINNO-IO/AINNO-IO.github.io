@@ -3,27 +3,27 @@
 ########## Unique Feature ###########
 #####################################
 
-title: 'What makes us Stand Out'
-description: 'The first is a non technical method which requires the use of adware removal software. Download free adware and spyware removal software and use advanced tools getting infected.'
-image: 'img/title-icon.png' 
+title: 'Kaip dirbame'
+description: 'DEMO pirmiau. Aiškūs etapai. Be staigmenų kainoje.'
+image: 'img/title-icon.png'
 
-main_image_slider: 
+main_image_slider:
   - image: 'img/feature/business-meeting.svg'
 
 sections:
 
-- title: 'Expert Team'
-  description: 'Our success is driven by an in-house team of professionals, including certified developers, project managers, and AI experts. We ensure tailored solutions, effective project management, and cutting-edge AI integration for your success.'
+- title: 'Komanda'
+  description: 'Kūrėjai ir AI specialistai vienoje vietoje.'
   image: /img/feature/f1.png
   link: '#'
 
-- title: 'Exceeding Expectations: Our Commitment to Excellence'
-  description: 'We pride ourselves on delivering reliable results, customized solutions, and unmatched customer satisfaction. Going the extra mile in every project, we consistently surpass expectations, ensuring your vision becomes a remarkable reality.'
+- title: 'Rezultatas'
+  description: 'Sprendimai, kuriais galima naudotis.'
   image: /img/feature/guarantee.png
   link: '#'
 
-- title: 'Transparent Pricing'
-  description: 'We understand the dislike for surprises in software development. Our transparent plans ensure promised results with clear costs, providing peace of mind.'
+- title: 'Kaina'
+  description: 'Žinote etapus ir kainą prieš pradedant.'
   image: /img/feature/money-box.png
   link: '#'
 

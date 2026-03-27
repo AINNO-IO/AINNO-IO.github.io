@@ -1,7 +1,21 @@
-title: 'Whenever You Need, Just Send a Message'
-description: 'Fill out the contact form and we will get back to you as soon as possible!'
-image: 'img/contact/email_image.png'
-contact_image: 'img/contact/contact-us.svg'
-email: 'info@ainno.io'
-phone: '00 (440) 9865 562 9865'
-address: 'Vilnius, Lithuania'
+title: 'Susisiek su mumis'
+description: 'Užpildykite formą – per 24 val. susisieksime ir įvertinsime jūsų procesus.'
+icon_class: 'fa fa-paper-plane'
+sidebar_note: 'Trumpai aprašykite procesą – pasiūlysime nemokamą analizę ir MVP planą.'
+form_trust: 'Atsakysime per 24h. Jokio spam.'
+
+# Web3Forms – https://web3forms.com (access_key matomas HTML; saugokite nuo spam botų per jų dashboard)
+web3forms_access_key: 'af2c22fe-37a5-4714-ba7f-b984e712b0e8'
+web3forms_subject: 'Užklausa iš ainno.io'
+# Optional: pilnas URL po sėkmės (pvz. https://ainno.io/contact/?thanks=1). Tuščia = Web3Forms numatytoji padėkos puslapis.
+web3forms_redirect: ''
+
+employee_options:
+  - value: '1-10'
+    label: '1–10'
+  - value: '11-50'
+    label: '11–50'
+  - value: '51-200'
+    label: '51–200'
+  - value: '200+'
+    label: '200+'

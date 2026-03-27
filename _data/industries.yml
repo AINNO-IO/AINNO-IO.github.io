@@ -1,0 +1,17 @@
+title: 'Kam tai tinka?'
+description: 'Jei turite pasikartojančių procesų ir duomenų – tikėtina, kad galime padėti.'
+icon_class: 'fa fa-building'
+
+items:
+  - title: 'Logistika'
+    description: 'Automatizuojame užsakymų ir dokumentų valdymą'
+    icon: 'fa fa-truck'
+  - title: 'E‑commerce'
+    description: 'Automatizuojame klientų aptarnavimą ir užsakymus'
+    icon: 'fa fa-shopping-cart'
+  - title: 'Finansai'
+    description: 'Automatizuojame sąskaitų ir duomenų apdorojimą'
+    icon: 'fa fa-university'
+  - title: 'Paslaugų verslai'
+    description: 'Automatizuojame vidinius procesus'
+    icon: 'fa fa-briefcase'
