@@ -1,10 +1,10 @@
 title: 'Kainodara'
 icon_class: 'fa fa-tags'
-intro: 'Kiekvienas sprendimas individualus, todėl kaina priklauso nuo sudėtingumo.'
+intro: 'Individualaus sprendimo kaina pateikiame kartu su bandomąja versija'
 sub_intro: 'Tačiau:'
 points:
   - 'Analizė – nemokama'
-  - 'MVP – nemokamas'
-  - 'Mokate tik jei matote vertę'
+  - 'Bandomoji versija – nemokama'
+  - 'Mokėsite tik sėkmingai išbandę ir integravę į savo procesus'
 cta_text: 'Gauti įvertinimą'
 cta_link: '/#contact'

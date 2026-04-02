@@ -15,10 +15,10 @@
             <div class="row mt-4">
                 {% for proces in site.data.execution.process %}
                 <div class="col-lg-6 mt-3">
-                    <div class="ainno-card ainno-card-interactive h-100">
+                    <div class="ainno-card ainno-card-interactive ainno-card--step h-100">
                         <div class="ainno-step">
                             <div class="ainno-step-num" aria-hidden="true">{{ forloop.index }}</div>
-                            <div>
+                            <div class="ainno-step-body">
                                 <h3>{{ proces.title }}</h3>
                                 {% if proces.description %}
                                 <p>{{ proces.description }}</p>

@@ -1,13 +1,13 @@
 
 # sass [ landing hero – see _includes/hero.html ]
 # sass_eyebrow: optional uppercase line above H1
-sass_name: 'Automatizuojame jūsų verslo procesus su AI<br><span class="ainno-hero-h1-accent">Sutaupykite iki 30–70% laiko per 30 dienų</span>'
-sass_text: 'Išanalizuojame procesus nemokamai, sukuriame veikiantį MVP, ir tik tada sprendžiate ar verta diegti.'
+sass_name: 'Verslo procesų automatizavimas su AI<br><span class="ainno-hero-h1-accent">Sutaupykite iki 70% laiko</span>'
+sass_text: 'Po analizės nemokamai gausite bandomąją programos versiją.'
 sass_bullets:
-  - 'Be rizikos – mokate tik jei veikia'
-  - 'MVP per 1–2 savaites'
+  - 'Be rizikos – mokėsite tik jei automatizavimas pavyko'
+  - 'Bandomoji versija per 1 savaitę'
   - 'Integruojame su jūsų esamomis sistemomis'
-sass_trust_below_cta: 'Per 24h susisieksime ir įvertinsime jūsų procesus'
+sass_trust_below_cta: 'Susisieksime per 24 valandas'
 sass_image: 'img/hero/hero-img.png'
 sass_btn_one_link: '/#contact'
 sass_btn_one_text: 'Gauti nemokamą procesų analizę'

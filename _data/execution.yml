@@ -1,5 +1,5 @@
 title: 'Kaip dirbame'
-description: 'Dirbame pagal Agile – aiškūs etapai, trumpi ciklai ir greitas grįžtamasis ryšys. Nuo pokalbio iki integracijos.'
+description: 'Keli paprasti etapai iki sprendimo jūsų verslui. Nuo pokalbio iki integracijos.'
 image: 'img/title-icon.png'
 icon_class: 'fa fa-road'
 
@@ -7,14 +7,14 @@ slider:
   - image: 'img/stat/software-engineer.svg'
 
 process:
-  - title: 'Per 30 min suprantame jūsų procesą'
+  - title: 'Poreikių ir proceso analizė'
     image: 'img/stat/developer-team.svg'
 
-  - title: 'Per 1–2 savaites sukuriame veikiantį MVP'
+  - title: 'Per 1 savaitę sukuriame veikiančią bandomąją programos versiją'
     image: 'img/stat/software-engineer.svg'
 
-  - title: 'Testuojate realiomis sąlygomis – be įsipareigojimų'
+  - title: 'Nemokamai išbandote sprendimą savo veikloje'
     image: 'img/stat/software-engineer_1.svg'
 
-  - title: 'Diegiame ir integruojame į jūsų sistemas'
+  - title: 'Tolimesnis diegimas ir integravimas į jūsų sistemas'
     image: 'img/stat/developer-team_1.svg'

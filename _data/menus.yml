@@ -1,8 +1,1 @@
-header:
-  - name: 'home'
-    title: 'Pradžia'
-    link: '/'
-
-  - name: 'contact'
-    title: 'Kontaktai'
-    link: '/contact'
+header: []

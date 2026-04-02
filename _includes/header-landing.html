@@ -11,13 +11,13 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="ainnoNav">
-                    <ul class="navbar-nav ml-auto align-items-lg-center">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
                         {%- for menu in site.data.menus.header -%}
                         <li class="nav-item">
                             <a class="nav-link px-lg-3" href="{{ menu.link | relative_url }}">{{ menu.title }}</a>
                         </li>
                         {%- endfor -%}
-                        <li class="nav-item mt-3 mt-lg-0 ml-lg-2">
+                        <li class="nav-item mt-3 mt-lg-0 ms-lg-2">
                             <a class="ainno-btn ainno-btn-primary" href="{{ site.data.hero.nav_cta_link | relative_url }}">{{ site.data.hero.nav_cta_text }}</a>
                         </li>
                     </ul>

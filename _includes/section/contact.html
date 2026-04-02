@@ -23,18 +23,13 @@
                             <input type="hidden" name="redirect" value="{{ site.data.contact.web3forms_redirect }}">
                             {% endif %}
                             <div class="form-group">
-                                <label for="contact-company">Įmonės pavadinimas</label>
-                                <input id="contact-company" name="company" autocomplete="organization" class="form-control" type="text"
-                                    placeholder="Įmonės pavadinimas" required>
+                                <label for="contact-name">Vardas</label>
+                                <input id="contact-name" name="name" autocomplete="name" class="form-control" type="text"
+                                    placeholder="Vardas ir pavardė" required>
                             </div>
                             <div class="form-group">
-                                <label for="contact-employees">Kiek darbuotojų?</label>
-                                <select id="contact-employees" name="employees" class="form-control" required>
-                                    <option value="" selected disabled>Pasirinkite</option>
-                                    {% for opt in site.data.contact.employee_options %}
-                                    <option value="{{ opt.value }}">{{ opt.label }}</option>
-                                    {% endfor %}
-                                </select>
+                                <label for="contact-phone">Telefono numeris</label>
+                                <input id="contact-phone" name="phone" type="tel" autocomplete="tel" class="form-control" placeholder="+370 600 00000">
                             </div>
                             <div class="form-group">
                                 <label for="contact-email">El. paštas</label>

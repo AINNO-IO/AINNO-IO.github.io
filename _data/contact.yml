@@ -1,7 +1,7 @@
 title: 'Susisiek su mumis'
-description: 'Užpildykite formą – per 24 val. susisieksime ir įvertinsime jūsų procesus.'
+description: 'Įvertinsime jūsų procesus per 24 valandas'
 icon_class: 'fa fa-paper-plane'
-sidebar_note: 'Trumpai aprašykite procesą – pasiūlysime nemokamą analizę ir MVP planą.'
+sidebar_note: 'Aprašykite veiklos problemą ar norimą automatizuoti procesą'
 form_trust: 'Atsakysime per 24h. Jokio spam.'
 
 # Web3Forms – https://web3forms.com (access_key matomas HTML; saugokite nuo spam botų per jų dashboard)
@@ -9,13 +9,3 @@ web3forms_access_key: 'af2c22fe-37a5-4714-ba7f-b984e712b0e8'
 web3forms_subject: 'Užklausa iš ainno.io'
 # Optional: pilnas URL po sėkmės (pvz. https://ainno.io/contact/?thanks=1). Tuščia = Web3Forms numatytoji padėkos puslapis.
 web3forms_redirect: ''
-
-employee_options:
-  - value: '1-10'
-    label: '1–10'
-  - value: '11-50'
-    label: '11–50'
-  - value: '51-200'
-    label: '51–200'
-  - value: '200+'
-    label: '200+'

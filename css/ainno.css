@@ -523,10 +523,23 @@ html, body {
   box-shadow: 0 14px 40px rgba(2, 6, 23, 0.06);
 }
 
+/* „Kaip dirbame“: turinys vertikaliai centre kortelėje (eilutėje vienodas aukštis) */
+.ainno-card--step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .ainno-step {
   display: flex;
   gap: 14px;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.ainno-step-body {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .ainno-step-num {
@@ -545,13 +558,14 @@ html, body {
 
 .ainno-step h3 {
   font-size: 16px;
-  margin: 2px 0 6px 0;
+  margin: 0;
   font-weight: 800;
   color: #0b1020;
+  line-height: 1.4;
 }
 
 .ainno-step p {
-  margin: 0;
+  margin: 8px 0 0 0;
   color: var(--ainno-muted);
 }
 
