@@ -9,9 +9,12 @@ address             : 'ainno.io '
 phone               : 0000000000
 tagline             : 'AI verslui'
 description: >-
-  AI ir custom programinė įranga. Nemokamas DEMO, aiškūs etapai. MB AI Sprendimai.
+  AINNO – AI ir procesų automatizacija B2B: nuo nemokamos analizės ir MVP iki integracijos jūsų sistemose.
+  MB AI Sprendimai, Vilnius. Sutaupykite laiką su AI sprendimais.
 baseurl             : "" # the subpath of your site, e.g. /blog
 url                 : "https://ainno.io"
+locale              : lt_LT
+lang                : lt
 favicon: 'img/favicon.png'
 
 paginate: 12
@@ -91,20 +94,23 @@ bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
-# Social Sharing
+# Social Sharing (SEO / Open Graph / JSON-LD)
 twitter:
   username               :
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
+og_image                 : img/hero/hero-img.png
+seo:
+  logo                   : img/logo.png
+  default_image_alt      : "AINNO – AI ir procesų automatizacija verslui"
+  keywords               : "AI automatizacija, procesų optimizacija, MVP, B2B, Lietuva, programinė įranga, integracijos, AINNO, MB AI Sprendimai"
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Organization
+  name                   : MB AI Sprendimai
+  links:
+    - https://www.facebook.com/profile.php?id=61576525419173
 
 # Analytics
 analytics:

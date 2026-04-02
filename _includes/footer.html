@@ -15,6 +15,20 @@
                             <a href="{{ site.data.footer.rekvizitai_url }}" target="_blank" rel="noopener">{{ site.data.footer.rekvizitai_label }}</a>
                         </div>
                     </div>
+                    {% if site.data.footer.facebook_url %}
+                    <div class="ainno-footer-social">
+                        {% if site.data.footer.social_heading %}
+                        <div class="ainno-footer-social-title">{{ site.data.footer.social_heading }}</div>
+                        {% endif %}
+                        <div class="ainno-footer-social-icons">
+                            <a href="{{ site.data.footer.facebook_url }}" target="_blank" rel="noopener noreferrer" class="ainno-footer-social-icon" aria-label="AINNO Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.748c0-.926.258-1.56 1.526-1.56h1.628V3.127c-.78-.085-1.598-.135-2.4-.135-2.413 0-4.063 1.473-4.063 4.171v2.087H7.896v3.209h2.522v8.196h2.979z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
                 <div class="col-lg-4 mt-4 mt-lg-0">
                     <div style="font-weight: 900; margin-bottom: 10px;">{{ site.data.footer.resources_link_heading }}</div>

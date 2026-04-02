@@ -10,6 +10,8 @@ company_code: '306416097'
 company_email: 'info@ainno.io'
 rekvizitai_url: 'https://rekvizitai.vz.lt/imone/ai_sprendimai/'
 rekvizitai_label: 'Rekvizitai įmonės profilis'
+social_heading: 'Sekite mus'
+facebook_url: 'https://www.facebook.com/profile.php?id=61576525419173'
 
 resources_link_heading: 'Nuorodos'
 resources_links:
@@ -26,5 +28,3 @@ legal_link_heading: 'Teisinė informacija'
 legal_links:
   - text: 'Privatumo politika'
     link: '/privacy'
-  - text: 'Slapukų politika'
-    link: '/cookies'

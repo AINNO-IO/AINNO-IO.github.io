@@ -636,6 +636,52 @@ html, body {
   margin-bottom: 0;
 }
 
+.ainno-footer-social {
+  margin-top: 20px;
+}
+
+.ainno-footer-social-title {
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 12px;
+}
+
+.ainno-footer-social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+
+.ainno-footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.ainno-footer-social-icon:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.ainno-footer-social-icon svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
 .ainno-footer-about {
   font-size: 14px;
   line-height: 1.55;
