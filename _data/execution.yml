@@ -10,7 +10,7 @@ process:
   - title: 'Poreikių ir proceso analizė'
     image: 'img/stat/developer-team.svg'
 
-  - title: 'Per 1 savaitę sukuriame veikiančią bandomąją programos versiją'
+  - title: 'Per 1 savaitę sukuriame bandomąją programos versiją'
     image: 'img/stat/software-engineer.svg'
 
   - title: 'Nemokamai išbandote sprendimą savo veikloje'

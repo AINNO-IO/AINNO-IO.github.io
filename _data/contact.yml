@@ -2,7 +2,7 @@ title: 'Susisiek su mumis'
 description: 'Įvertinsime jūsų procesus per 24 valandas'
 icon_class: 'fa fa-paper-plane'
 sidebar_note: 'Aprašykite veiklos problemą ar norimą automatizuoti procesą'
-form_trust: 'Atsakysime per 24h. Jokio spam.'
+form_trust: 'Atsakysime per 24 val.'
 
 # Web3Forms – https://web3forms.com (access_key matomas HTML; saugokite nuo spam botų per jų dashboard)
 web3forms_access_key: 'af2c22fe-37a5-4714-ba7f-b984e712b0e8'

@@ -10,7 +10,9 @@
                         </div>
                     </div>
                     <p class="section-lead mb-2">{{ site.data.pricing_teaser.intro }}</p>
+                    {% if site.data.pricing_teaser.sub_intro %}
                     <p class="ainno-pricing-teaser-sub mb-2">{{ site.data.pricing_teaser.sub_intro }}</p>
+                    {% endif %}
                     <ul class="ainno-pricing-teaser-list">
                         {% for p in site.data.pricing_teaser.points %}
                         <li><i class="fa fa-check" aria-hidden="true"></i> {{ p }}</li>
