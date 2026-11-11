@@ -1,0 +1,8 @@
+/* Styles for the landing layout (homepage LT + EN). Most styling is inline in the pages. */
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #0c0a1a; }
+a { color: #b794ff; }
+a:hover { color: #d6c2ff; }
+input:focus, textarea:focus { outline: 2px solid #b794ff; outline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid #b794ff; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
