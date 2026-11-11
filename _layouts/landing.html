@@ -11,6 +11,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ 'css/landing.css' | relative_url }}">
+{% if page.lang == 'lt' %}
+<script>
+/* Visitors whose browser isn't set to Lithuanian go to /en/, unless they picked a language with the LT/EN switch. Crawlers are skipped so both versions stay indexed. */
+(function () {
+  try {
+    var pref = localStorage.getItem('ainno-lang');
+    if (pref === 'lt') return;
+    if (pref !== 'en') {
+      if (/bot|crawl|spider|slurp|lighthouse|preview|facebookexternalhit|linkedin/i.test(navigator.userAgent)) return;
+      var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+      for (var i = 0; i < langs.length; i++) if (/^lt\b/i.test(langs[i])) return;
+    }
+    location.replace('{{ "/en/" | relative_url }}' + location.search + location.hash);
+  } catch (e) {}
+})();
+</script>
+{% endif %}
+<script>
+/* Remember the language when someone uses the LT/EN switch. */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[lang]');
+  if (!a) return;
+  try { localStorage.setItem('ainno-lang', a.getAttribute('lang')); } catch (err) {}
+});
+</script>
 {% include seo.html %}
 </head>
 <body>

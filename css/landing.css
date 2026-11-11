@@ -6,3 +6,16 @@ a:hover { color: #d6c2ff; }
 input:focus, textarea:focus { outline: 2px solid #b794ff; outline-offset: 2px; }
 a:focus-visible, button:focus-visible { outline: 2px solid #b794ff; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Sticky header */
+header { position: sticky; top: 0; z-index: 50; background: rgba(12, 10, 26, 0.85); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+section[id] { scroll-margin-top: 84px; }
+/* Phones: one-row header — hide section links, keep logo, LT/EN and the button */
+@media (max-width: 640px) {
+  header > div { padding-top: 10px !important; padding-bottom: 10px !important; flex-wrap: nowrap !important; gap: 12px !important; }
+  header > div > a img { height: 22px !important; }
+  header nav { flex-wrap: nowrap !important; gap: 12px !important; }
+  header nav > a:not(:last-child) { display: none !important; }
+  header nav > a:last-child { padding: 10px 16px !important; font-size: 14px !important; white-space: nowrap; }
+  section[id] { scroll-margin-top: 64px; }
+}
