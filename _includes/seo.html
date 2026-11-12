@@ -83,7 +83,7 @@
   {%- assign og_type = "website" -%}
 {%- endif -%}
 
-{%- assign og_locale = site.locale | replace: "-", "_" | default: "lt_LT" -%}
+{%- if page.lang == 'en' -%}{%- assign og_locale = "en_GB" -%}{%- else -%}{%- assign og_locale = site.locale | replace: "-", "_" | default: "lt_LT" -%}{%- endif -%}
 
 <title>{{ browser_title }}{% if paginator %}{% unless paginator.page == 1 %} {{ title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 <meta name="description" content="{{ seo_description }}">
@@ -92,7 +92,7 @@
 {% endif %}
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#0b1020">
-<meta name="language" content="{{ site.lang | default: 'lt' }}">
+<meta name="language" content="{{ page.lang | default: site.lang | default: 'lt' }}">
 
 {% if author.name %}
   <meta name="author" content="{{ author.name | default: author }}">
@@ -149,7 +149,7 @@
 {% endif %}
 
 <link rel="canonical" href="{{ canonical_url }}">
-<link rel="alternate" hreflang="{{ site.lang | default: 'lt' }}" href="{{ canonical_url }}">
+{% unless page.layout == 'landing' %}<link rel="alternate" hreflang="{{ site.lang | default: 'lt' }}" href="{{ canonical_url }}">{% endunless %}
 
 {% if paginator.previous_page %}
 <link rel="prev" href="{{ paginator.previous_page_path | absolute_url }}">

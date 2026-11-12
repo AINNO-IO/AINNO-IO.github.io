@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0c0a1a">
 <link rel="shortcut icon" href="{{ site.favicon | relative_url }}">
-<link rel="alternate" hreflang="lt" href="{{ '/' | absolute_url }}">
-<link rel="alternate" hreflang="en" href="{{ '/en/' | absolute_url }}">
+<link rel="alternate" hreflang="lt" href="{{ page.lt_url | default: '/' | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ page.en_url | default: '/en/' | absolute_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -41,17 +41,23 @@ document.addEventListener('click', function (e) {
 <body>
 {{ content }}
 <script>
-/* Contact form: preselect the phone country code, translate validation messages, and send the phone as "+370 61234567". */
+/* Contact form: preselect the phone country code, translate validation messages, send in the background
+   with the phone as "+370 61234567", and show a thank-you popup. */
 (function () {
   var lang = document.documentElement.lang === 'en' ? 'en' : 'lt';
   var msg = {
-    lt: { email: 'Įveskite teisingą el. pašto adresą, pvz. vardas@imone.lt', phone: 'Įveskite telefono numerį skaitmenimis, pvz. 612 34567', required: 'Užpildykite šį lauką' },
-    en: { email: 'Enter a valid email address, e.g. name@company.com', phone: 'Enter the phone number in digits, e.g. 7700 900123', required: 'Please fill in this field' }
+    lt: { email: 'Įveskite teisingą el. pašto adresą, pvz. vardas@imone.lt', phone: 'Įveskite telefono numerį skaitmenimis, pvz. 612 34567', required: 'Užpildykite šį lauką', sending: 'Siunčiama…',
+          ok: { title: 'Ačiū! Užklausa išsiųsta', text: 'Atsakysime per 24 valandas.', button: 'Gerai' },
+          fail: { title: 'Nepavyko išsiųsti', text: 'Bandykite dar kartą arba parašykite mums <a href="mailto:info@ainno.io">info@ainno.io</a>.', button: 'Uždaryti' } },
+    en: { email: 'Enter a valid email address, e.g. name@company.com', phone: 'Enter the phone number in digits, e.g. 7700 900123', required: 'Please fill in this field', sending: 'Sending…',
+          ok: { title: 'Thank you! Your message has been sent', text: 'We will reply within 24 hours.', button: 'OK' },
+          fail: { title: 'Sending failed', text: 'Please try again or email us at <a href="mailto:info@ainno.io">info@ainno.io</a>.', button: 'Close' } }
   }[lang];
-  document.querySelectorAll('form').forEach(function (form) {
+  document.querySelectorAll('form[action*="web3forms"]').forEach(function (form) {
     var cc = form.querySelector('[data-phone-cc]');
     var phone = form.querySelector('input[name=phone]');
-    if (cc && lang === 'en') {
+    function preselect() {
+      if (!cc || lang !== 'en') return;
       /* Guess the country from the browser language (en-GB -> +44); stays +370 if there is no match. */
       var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
       outer: for (var i = 0; i < langs.length; i++) {
@@ -61,6 +67,7 @@ document.addEventListener('click', function (e) {
       }
       if (phone) phone.placeholder = '';
     }
+    preselect();
     form.querySelectorAll('input, textarea').forEach(function (el) {
       el.addEventListener('invalid', function () {
         if (el.validity.valueMissing) el.setCustomValidity(msg.required);
@@ -69,19 +76,61 @@ document.addEventListener('click', function (e) {
       });
       el.addEventListener('input', function () { el.setCustomValidity(''); });
     });
-    form.addEventListener('submit', function () {
-      if (!cc || !phone) return;
-      var v = phone.value.trim();
-      if (v && v.charAt(0) !== '+') {
-        if (cc.value === '+370' && /^8/.test(v) && v.replace(/\D/g, '').length === 9) v = v.replace(/^8\s*/, '');
-        else v = v.replace(/^0\s*/, '');
-        phone.value = cc.value + ' ' + v;
+    /* Send in the background and show a popup, so the visitor stays on ainno.io.
+       Without JavaScript the form still posts normally to Web3Forms. */
+    var button = form.querySelector('button[type=submit]');
+    form.addEventListener('submit', function (e) {
+      if (!window.fetch) return;
+      e.preventDefault();
+      var data = Object.fromEntries(new FormData(form));
+      if (cc && phone) {
+        var v = (data.phone || '').trim();
+        if (v && v.charAt(0) !== '+') {
+          if (cc.value === '+370' && /^8/.test(v) && v.replace(/\D/g, '').length === 9) v = v.replace(/^8\s*/, '');
+          else v = v.replace(/^0\s*/, '');
+          v = cc.value + ' ' + v;
+        }
+        data.phone = v;
+        delete data.phone_country;
       }
-      cc.disabled = true; /* the code is now part of the phone value */
+      var label = button.textContent;
+      button.disabled = true; button.textContent = msg.sending; button.style.opacity = '0.7';
+      fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return r.ok && j.success; }); })
+        .catch(function () { return false; })
+        .then(function (ok) {
+          button.disabled = false; button.textContent = label; button.style.opacity = '';
+          if (ok) { form.reset(); preselect(); }
+          showDialog(ok);
+        });
     });
-    /* Coming back with the Back button: make the dropdown usable again. */
-    window.addEventListener('pageshow', function () { if (cc) cc.disabled = false; });
   });
+
+  function showDialog(ok) {
+    var t = ok ? msg.ok : msg.fail;
+    var d = document.getElementById('form-dialog');
+    if (!d) {
+      d = document.createElement('dialog');
+      d.id = 'form-dialog';
+      d.setAttribute('aria-labelledby', 'form-dialog-title');
+      d.style.cssText = 'background:#151228;color:#f1eefc;border:1px solid #4a3d8a;border-radius:20px;padding:36px 32px 28px;max-width:420px;width:calc(100% - 48px);box-sizing:border-box;text-align:center;font-family:Inter,system-ui,sans-serif';
+      d.innerHTML = '<div data-icon style="width:56px;height:56px;border-radius:50%;margin:0 auto 18px;display:flex;align-items:center;justify-content:center"></div>' +
+        '<h2 id="form-dialog-title" style="margin:0 0 10px;font-family:\'Space Grotesk\',sans-serif;font-size:24px;line-height:1.2"></h2>' +
+        '<p data-text style="margin:0 0 24px;color:#aaa4c4;font-size:16px;line-height:1.55"></p>' +
+        '<form method="dialog"><button style="background:#7b10ff;color:#fff;border:0;border-radius:999px;font:inherit;font-weight:600;padding:13px 34px;min-height:48px;cursor:pointer"></button></form>';
+      d.addEventListener('click', function (e) { if (e.target === d) d.close(); }); /* click outside closes */
+      document.body.appendChild(d);
+    }
+    var icon = d.querySelector('[data-icon]');
+    icon.style.background = ok ? '#2a1466' : '#3a1530';
+    icon.innerHTML = ok
+      ? '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#b794ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+      : '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ff8fb1" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 7v6M12 17h.01"/></svg>';
+    d.querySelector('h2').textContent = t.title;
+    d.querySelector('[data-text]').innerHTML = t.text;
+    d.querySelector('button').textContent = t.button;
+    if (d.showModal) d.showModal(); else d.setAttribute('open', '');
+  }
 })();
 </script>
 </body>

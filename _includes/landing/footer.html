@@ -10,6 +10,6 @@
 <span>Vilnius, Lietuva · <a href="mailto:info@ainno.io" style="color: #aaa4c4">info@ainno.io</a></span>
 {%- endif %}
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 24px"><a href="{{ '/privacy/' | relative_url }}" style="color: #aaa4c4">{% if page.lang == 'en' %}Privacy policy{% else %}Privatumo politika{% endif %}</a><span>© {{ site.time | date: '%Y' }} AINNO</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px"><a href="{% if page.lang == 'en' %}{{ '/en/privacy/' | relative_url }}{% else %}{{ '/privacy/' | relative_url }}{% endif %}" style="color: #aaa4c4">{% if page.lang == 'en' %}Privacy policy{% else %}Privatumo politika{% endif %}</a><span>© {{ site.time | date: '%Y' }} AINNO</span></div>
 </div>
 </footer>
