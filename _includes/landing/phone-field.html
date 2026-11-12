@@ -1,0 +1,11 @@
+{%- comment -%} Phone number with a country-code dropdown. Params: id (input id), label. {%- endcomment -%}
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="{{ include.id }}" style="font-size: 14px; color: #aaa4c4">{{ include.label }}</label>
+<div style="display: flex; gap: 8px">
+<select name="phone_country" data-phone-cc aria-label="{% if page.lang == 'en' %}Country code{% else %}Šalies kodas{% endif %}" style="flex: 0 0 auto; background: #0c0a1a; border: 1px solid #5d5488; border-radius: 10px; color: #f1eefc; font: inherit; padding: 12px 10px; min-height: 46px; box-sizing: border-box; cursor: pointer">
+{%- for c in site.data.phone_codes %}
+<option value="{{ c.code }}" data-cc="{{ c.cc }}"{% if c.cc == 'LT' %} selected{% endif %}>{{ c.flag }} {{ c.code }}</option>
+{%- endfor %}
+</select>
+<input id="{{ include.id }}" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="612 34567" pattern="\+?[0-9 \(\)\-]{6,20}" style="flex: 1 1 auto; min-width: 0; background: #0c0a1a; border: 1px solid #5d5488; border-radius: 10px; color: #f1eefc; font: inherit; padding: 12px 14px; min-height: 46px; box-sizing: border-box; width: 100%">
+</div>
+</div>

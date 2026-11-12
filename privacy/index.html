@@ -1,8 +1,37 @@
 ---
-layout: default
+layout: landing
+lang: lt
 name: privacy
 title: Privatumo politika
 description: AINNO privatumo politika. Kaip tvarkome duomenis svetainėje ainno.io ir kontaktų formoje.
+updated: 2026-11-12
 ---
+<div style="background: #0c0a1a; color: #f1eefc; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column">
 
-{% include section/privacy-policy.html %}
+{% include landing/header.html %}
+
+<main style="flex: 1 0 auto">
+<section style="background: radial-gradient(900px 420px at 85% 0%, #2a1466 0%, #0c0a1a 70%)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 88px 24px 56px">
+<p style="margin: 0 0 12px; color: #b794ff; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600">Dokumentai</p>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(36px, 5vw, 60px); line-height: 1.05; letter-spacing: -0.02em">{{ site.data.privacy_policy.title }}</h1>
+<p style="margin: 20px 0 0; max-width: 640px; font-size: 18px; color: #aaa4c4">{{ site.data.privacy_policy.lead }}</p>
+</div>
+</section>
+
+<section style="max-width: 1160px; margin: 0 auto; padding: 0 24px 88px">
+<div style="max-width: 800px; display: flex; flex-direction: column; gap: 16px">
+{%- for block in site.data.privacy_policy.sections %}
+<div style="background: #151228; border: 1px solid #2b2647; border-radius: 20px; padding: 28px 32px">
+<h2 style="margin: 0 0 8px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 21px; line-height: 1.3">{{ block.heading }}</h2>
+<p style="margin: 0; color: #aaa4c4; font-size: 16px">{{ block.body }}</p>
+</div>
+{%- endfor %}
+<p style="margin: 16px 0 0; color: #aaa4c4; font-size: 14px">Atnaujinta {{ page.updated | date: '%Y-%m-%d' }}</p>
+</div>
+</section>
+</main>
+
+{% include landing/footer.html %}
+
+</div>

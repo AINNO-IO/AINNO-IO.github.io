@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ 'css/landing.css' | relative_url }}">
-{% if page.lang == 'lt' %}
+{% if page.url == '/' %}
 <script>
 /* Visitors whose browser isn't set to Lithuanian go to /en/, unless they picked a language with the LT/EN switch. Crawlers are skipped so both versions stay indexed. */
 (function () {
@@ -40,5 +40,49 @@ document.addEventListener('click', function (e) {
 </head>
 <body>
 {{ content }}
+<script>
+/* Contact form: preselect the phone country code, translate validation messages, and send the phone as "+370 61234567". */
+(function () {
+  var lang = document.documentElement.lang === 'en' ? 'en' : 'lt';
+  var msg = {
+    lt: { email: 'Įveskite teisingą el. pašto adresą, pvz. vardas@imone.lt', phone: 'Įveskite telefono numerį skaitmenimis, pvz. 612 34567', required: 'Užpildykite šį lauką' },
+    en: { email: 'Enter a valid email address, e.g. name@company.com', phone: 'Enter the phone number in digits, e.g. 7700 900123', required: 'Please fill in this field' }
+  }[lang];
+  document.querySelectorAll('form').forEach(function (form) {
+    var cc = form.querySelector('[data-phone-cc]');
+    var phone = form.querySelector('input[name=phone]');
+    if (cc && lang === 'en') {
+      /* Guess the country from the browser language (en-GB -> +44); stays +370 if there is no match. */
+      var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+      outer: for (var i = 0; i < langs.length; i++) {
+        var region = (langs[i].split('-')[1] || '').toUpperCase();
+        if (!region) continue;
+        for (var j = 0; j < cc.options.length; j++) if (cc.options[j].getAttribute('data-cc') === region) { cc.selectedIndex = j; break outer; }
+      }
+      if (phone) phone.placeholder = '';
+    }
+    form.querySelectorAll('input, textarea').forEach(function (el) {
+      el.addEventListener('invalid', function () {
+        if (el.validity.valueMissing) el.setCustomValidity(msg.required);
+        else if (el.name === 'email') el.setCustomValidity(msg.email);
+        else if (el.name === 'phone') el.setCustomValidity(msg.phone);
+      });
+      el.addEventListener('input', function () { el.setCustomValidity(''); });
+    });
+    form.addEventListener('submit', function () {
+      if (!cc || !phone) return;
+      var v = phone.value.trim();
+      if (v && v.charAt(0) !== '+') {
+        if (cc.value === '+370' && /^8/.test(v) && v.replace(/\D/g, '').length === 9) v = v.replace(/^8\s*/, '');
+        else v = v.replace(/^0\s*/, '');
+        phone.value = cc.value + ' ' + v;
+      }
+      cc.disabled = true; /* the code is now part of the phone value */
+    });
+    /* Coming back with the Back button: make the dropdown usable again. */
+    window.addEventListener('pageshow', function () { if (cc) cc.disabled = false; });
+  });
+})();
+</script>
 </body>
 </html>

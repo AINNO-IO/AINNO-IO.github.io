@@ -1,0 +1,24 @@
+{%- if page.lang == 'en' -%}{%- assign home = '/en/' | relative_url -%}{%- else -%}{%- assign home = '/' | relative_url -%}{%- endif -%}
+{%- if page.url == '/' or page.url == '/en/' -%}{%- assign anchor = '' -%}{%- else -%}{%- assign anchor = home -%}{%- endif -%}
+<header style="border-bottom: 1px solid #2b2647">
+<div style="max-width: 1160px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="{{ home }}" style="display: flex; align-items: center; text-decoration: none"><img src="{{ '/img/logo-white.png' | relative_url }}" alt="AINNO" style="height: 26px; width: auto; display: block"></a>
+{%- if page.lang == 'en' %}
+<nav aria-label="Main navigation" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+<a href="{{ anchor }}#work" style="color: #f1eefc; text-decoration: none; font-size: 15px; padding: 12px 0">Solutions</a>
+<a href="{{ anchor }}#process" style="color: #f1eefc; text-decoration: none; font-size: 15px; padding: 12px 0">How we work</a>
+<a href="{{ anchor }}#contact" style="color: #f1eefc; text-decoration: none; font-size: 15px; padding: 12px 0">Contact</a>
+<span style="display: flex; align-items: center; gap: 8px; font-size: 14px"><a href="{{ '/' | relative_url }}" lang="lt" aria-label="Perjungti į lietuvių kalbą" style="color: #aaa4c4; text-decoration: none; padding: 12px 4px">LT</a><span aria-hidden="true" style="color: #aaa4c4">/</span><span style="color: #b794ff; font-weight: 600">EN</span></span>
+<a href="{{ anchor }}#contact" style="background: #7b10ff; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 999px">Get in touch</a>
+</nav>
+{%- else %}
+<nav aria-label="Pagrindinė navigacija" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+<a href="{{ anchor }}#work" style="color: #f1eefc; text-decoration: none; font-size: 15px; padding: 12px 0">Sprendimai</a>
+<a href="{{ anchor }}#process" style="color: #f1eefc; text-decoration: none; font-size: 15px; padding: 12px 0">Kaip dirbame</a>
+<a href="{{ anchor }}#contact" style="color: #f1eefc; text-decoration: none; font-size: 15px; padding: 12px 0">Kontaktai</a>
+<span style="display: flex; align-items: center; gap: 8px; font-size: 14px"><span style="color: #b794ff; font-weight: 600">LT</span><span aria-hidden="true" style="color: #aaa4c4">/</span><a href="{{ '/en/' | relative_url }}" lang="en" aria-label="Switch to English" style="color: #aaa4c4; text-decoration: none; padding: 12px 4px">EN</a></span>
+<a href="{{ anchor }}#contact" style="background: #7b10ff; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 999px">Susisiekime</a>
+</nav>
+{%- endif %}
+</div>
+</header>

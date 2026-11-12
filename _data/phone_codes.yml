@@ -1,0 +1,23 @@
+# Country dial codes for the contact form phone field (Lithuania first, then A–Z by country code)
+- { cc: LT, code: "+370", flag: "🇱🇹" }
+- { cc: AT, code: "+43",  flag: "🇦🇹" }
+- { cc: BE, code: "+32",  flag: "🇧🇪" }
+- { cc: CH, code: "+41",  flag: "🇨🇭" }
+- { cc: CZ, code: "+420", flag: "🇨🇿" }
+- { cc: DE, code: "+49",  flag: "🇩🇪" }
+- { cc: DK, code: "+45",  flag: "🇩🇰" }
+- { cc: EE, code: "+372", flag: "🇪🇪" }
+- { cc: ES, code: "+34",  flag: "🇪🇸" }
+- { cc: FI, code: "+358", flag: "🇫🇮" }
+- { cc: FR, code: "+33",  flag: "🇫🇷" }
+- { cc: GB, code: "+44",  flag: "🇬🇧" }
+- { cc: IE, code: "+353", flag: "🇮🇪" }
+- { cc: IT, code: "+39",  flag: "🇮🇹" }
+- { cc: LV, code: "+371", flag: "🇱🇻" }
+- { cc: NL, code: "+31",  flag: "🇳🇱" }
+- { cc: NO, code: "+47",  flag: "🇳🇴" }
+- { cc: PL, code: "+48",  flag: "🇵🇱" }
+- { cc: PT, code: "+351", flag: "🇵🇹" }
+- { cc: SE, code: "+46",  flag: "🇸🇪" }
+- { cc: UA, code: "+380", flag: "🇺🇦" }
+- { cc: US, code: "+1",   flag: "🇺🇸" }

@@ -1,0 +1,15 @@
+<footer style="border-top: 1px solid #2b2647">
+<div style="max-width: 1160px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 24px; font-size: 14px; color: #aaa4c4">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<img src="{{ '/img/logo-white.png' | relative_url }}" alt="AINNO" style="height: 20px; width: auto; display: block; align-self: flex-start">
+{%- if page.lang == 'en' %}
+<span>MB AI Sprendimai · Company code 306416097</span>
+<span>Vilnius, Lithuania · <a href="mailto:info@ainno.io" style="color: #aaa4c4">info@ainno.io</a></span>
+{%- else %}
+<span>MB „AI Sprendimai“ · Įmonės kodas 306416097</span>
+<span>Vilnius, Lietuva · <a href="mailto:info@ainno.io" style="color: #aaa4c4">info@ainno.io</a></span>
+{%- endif %}
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px"><a href="{{ '/privacy/' | relative_url }}" style="color: #aaa4c4">{% if page.lang == 'en' %}Privacy policy{% else %}Privatumo politika{% endif %}</a><span>© {{ site.time | date: '%Y' }} AINNO</span></div>
+</div>
+</footer>
