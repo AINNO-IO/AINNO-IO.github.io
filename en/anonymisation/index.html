@@ -1,0 +1,359 @@
+---
+layout: landing
+lang: en
+title: Document PII masking
+description: "Automatically finds and removes personal data from PDF, Word and Excel documents, images and drawings. Runs locally – your documents stay with you."
+lt_url: /nuasmeninimas/
+en_url: /en/anonymisation/
+---
+<style>
+:root{
+  --bg:#0c0a1a; --bg-alt:#110e22; --surface:#151228; --line:#2b2647; --line-strong:#4a3d8a;
+  --outline:#5d5488; --text:#f1eefc; --muted:#aaa4c4; --accent:#b794ff; --primary:#7b10ff;
+  --hero:radial-gradient(900px 520px at 85% 0%, #2a1466 0%, #0c0a1a 70%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,video{max-width:100%;height:auto;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:88px 24px}
+.alt{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.eyebrow{margin:0 0 12px;color:var(--accent);font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:700;margin:0}
+h1{font-size:clamp(40px,5.8vw,76px);line-height:1.02;letter-spacing:-.025em}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.12;letter-spacing:-.015em;max-width:760px}
+h3{font-size:21px;line-height:1.25}
+.hl{color:var(--accent)}
+.lead{margin:28px 0 0;max-width:640px;font-size:19px;color:var(--muted)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;border-radius:999px;padding:16px 28px;font-size:16px;cursor:pointer;font-family:inherit;border:0}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 30px -10px rgba(123,16,255,.8)}
+.btn-primary:hover{background:#8a2bff}
+.btn-outline{border:1px solid var(--outline);color:var(--text);padding:15px 26px;background:transparent}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line-strong);color:var(--text);font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px}
+.split{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.split>*{flex:1 1 380px;min-width:0}
+.split.rev{flex-direction:row-reverse}
+.checks{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.checks li{display:flex;gap:12px;color:var(--muted)}
+.checks li::before{content:"";flex:0 0 20px;height:20px;margin-top:3px;border-radius:50%;background:rgba(183,148,255,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23b794ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.checks b{color:var(--text);font-weight:600}
+/* header */
+header{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;background:rgba(12,10,26,.88);backdrop-filter:blur(10px)}
+header .in{max-width:1160px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+header nav{display:flex;flex-wrap:wrap;align-items:center;gap:28px}
+header nav a.l{color:var(--text);text-decoration:none;font-size:15px;padding:12px 0}
+.lang{display:flex;align-items:center;gap:8px;font-size:14px}
+.lang b{color:var(--accent)} .lang span,.lang a{color:var(--muted);text-decoration:none}
+header .btn{padding:12px 22px;font-size:15px}
+@media (max-width:760px){header nav a.l{display:none}}
+/* hero */
+.hero{background:var(--hero)}
+.hero .wrap{padding:96px 24px 72px}
+.ctas{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px}
+.hero-img{margin-top:56px}
+.shot.hero-img{display:block}
+/* media frame (matches the dark browser frame used in the images) */
+.frame{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 40px 90px -24px rgba(0,0,0,.75),0 0 80px -20px rgba(123,16,255,.35)}
+.frame .bar{height:36px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 14px}
+.frame .bar span{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.frame .bar em{margin-left:16px;font-style:normal;font-size:12px;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:2px 12px}
+.frame video{width:100%;height:auto;background:#fff}
+/* features */
+.grid{display:flex;flex-wrap:wrap;gap:24px;margin-top:48px}
+.feat{flex:1 1 250px;padding:32px}
+.feat svg{width:40px;height:40px}
+.feat h3{margin:18px 0 8px}
+.feat p{margin:0;color:var(--muted);font-size:15px}
+.feat.hot{background:var(--primary);border-color:var(--primary)}
+.feat.hot p{color:#fff} .feat.hot svg *{stroke:#fff}
+/* steps */
+.steps{list-style:none;margin:48px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:24px}
+.steps li{flex:1 1 300px;padding:32px}
+.steps .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;color:var(--accent);line-height:1}
+.steps h3{margin:14px 0 8px}
+.steps p{margin:0;color:var(--muted);font-size:15px}
+.steps li.hot{background:var(--primary);border-color:var(--primary)} .steps li.hot .n,.steps li.hot p{color:#fff}
+/* faq */
+.faq{margin-top:40px;display:flex;flex-direction:column;gap:14px;max-width:860px}
+details{padding:22px 26px}
+summary{cursor:pointer;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--accent);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:14px 0 0;color:var(--muted)}
+/* demo form */
+form{padding:32px;display:flex;flex-direction:column;gap:18px}
+.row{display:flex;flex-wrap:wrap;gap:18px}
+.row>div{flex:1 1 200px;display:flex;flex-direction:column;gap:6px}
+label{font-size:14px;color:var(--muted)}
+input,textarea,select{background:var(--bg);border:1px solid var(--outline);border-radius:10px;color:var(--text);font:inherit;padding:12px 14px;min-height:46px;width:100%}
+textarea{resize:vertical}
+select[data-phone-cc]{width:auto}
+.sent{display:none;padding:14px 16px;border-radius:12px;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.4);color:#c8f7e3;font-size:14px}
+/* labels over screenshots: HTML, not baked into the images */
+.shot{position:relative;display:block}
+.lbl{position:absolute;left:var(--x);top:var(--y);z-index:2;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:999px;color:var(--text);font-weight:600;
+  font-size:clamp(11px,1.05vw,15px);padding:.45em 1.1em;box-shadow:0 12px 30px -10px rgba(0,0,0,.7)}
+.lbl i{width:.55em;height:.55em;border-radius:50%;display:inline-block}
+.lbl .y{background:#facc15}.lbl .p{background:#b794ff}.lbl .g{background:#34d399}
+.lbl.r{left:auto;right:var(--r)}
+.only-m{display:none}
+@media (max-width:767px){.lbl.only-d{display:none}.lbl.only-m{display:inline-flex;font-size:12px}}
+footer{border-top:1px solid var(--line)}
+footer .in{max-width:1160px;margin:0 auto;padding:40px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;font-size:14px;color:var(--muted)}
+</style>
+<div class="pg">
+
+<header>
+<div class="in">
+  <a href="{{ '/en/' | relative_url }}" style="display:flex;align-items:center"><img src="{{ '/img/logo-white.png' | relative_url }}" alt="AINNO" style="height:26px;width:auto"></a>
+  <nav aria-label="Main navigation">
+    <a class="l" href="#funkcijos">Features</a>
+    <a class="l" href="#saugumas">Security</a>
+    <a class="l" href="#duk">FAQ</a>
+    <span class="lang"><a href="{{ '/nuasmeninimas/' | relative_url }}" lang="lt" hreflang="lt" aria-label="Perjungti į lietuvių kalbą">LT</a><span aria-hidden="true">/</span><b>EN</b></span>
+    <a class="btn btn-primary" href="#demo">Request an offer</a>
+  </nav>
+</div>
+</header>
+
+<!-- 1. HERO -->
+<section class="hero">
+<div class="wrap">
+  <p class="eyebrow">Document PII masking</p>
+  <h1>Redact documents <span class="hl">in minutes, not hours</span></h1>
+  <p class="lead">The app finds and removes personal data from contracts, decisions, drawings and other documents on its own. All that is left for you is to review the result.</p>
+  <p style="margin:28px 0 0"><span class="badge"><i></i>Runs locally – your documents stay with you</span></p>
+  <div class="ctas">
+    <a class="btn btn-primary" href="#demo">Request an offer</a>
+    <a class="btn btn-outline" href="#video">▶&nbsp; How it works</a>
+  </div>
+  <div class="shot hero-img"><picture>
+    <source media="(max-width: 767px)" type="image/webp" srcset="{{ '/img/nuasmeninimas/hero-mobile.webp' | relative_url }}">
+    <img src="{{ '/img/nuasmeninimas/hero-desktop.webp' | relative_url }}" width="1440" height="810" alt="An original tenancy agreement with personal data highlighted, and the same agreement in the review window with the data hidden.">
+  </picture>
+    <span class="lbl only-d" style="--x:6.67%;--y:14.57%"><i class="y"></i>Original</span>
+    <span class="lbl only-d r" style="--r:2.0%;--y:86.42%"><i class="p"></i>17 personal data items hidden</span>
+    <span class="lbl only-m" style="--x:6.67%;--y:4.5%"><i class="y"></i>Original</span>
+    <span class="lbl only-m" style="--x:62.96%;--y:52.5%"><i class="p"></i>Redacted</span>
+  </div>
+</div>
+</section>
+
+<!-- 2. FEATURES -->
+<section id="funkcijos">
+<div class="wrap">
+  <p class="eyebrow">Features</p>
+  <h2>Everything you need to publish documents safely</h2>
+  <div class="grid">
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><path d="M11 5h13l7 7v23H11z"/><path d="M24 5v7h7"/><path d="M15 21h10M15 26h10M15 31h6"/></svg>
+      <h3>Many file formats</h3>
+      <p>PDF (text and scanned), Word (.docx), Excel (.xlsx), JPG, JPEG and PNG images, scanned documents and drawings.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><path d="M9 9h16v24H9z"/><path d="M13 5h16v24"/><path d="M17 1h16v24" opacity=".5"/></svg>
+      <h3>Large documents</h3>
+      <p>Documents with hundreds of pages are supported. They are processed in the background: you see the progress and can keep working.</p>
+    </div>
+    <div class="card feat hot">
+      <svg viewBox="0 0 40 40" fill="none" stroke-width="2" stroke-linejoin="round"><rect x="7" y="18" width="26" height="17" rx="3" stroke="#fff"/><path d="M13 18v-5a7 7 0 0 1 14 0v5" stroke="#fff"/><path d="M20 25v4" stroke="#fff" stroke-linecap="round"/></svg>
+      <h3>Runs locally</h3>
+      <p>The app runs on your own computer or internal server and does not need an internet connection. Your documents stay with you.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><path d="M8 11h24M15 11V7h10v4M11 11l2 24h14l2-24"/><path d="M17 17v12M23 17v12"/></svg>
+      <h3>Removed, not covered</h3>
+      <p>Hidden text is deleted from the file together with the metadata (author, software). The result is verified – the data cannot be restored.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><circle cx="15" cy="14" r="5"/><path d="M5 33c1-6 5-9 10-9s9 3 10 9"/><circle cx="28" cy="15" r="4"/><path d="M27 23c4 0 7 3 8 8"/></svg>
+      <h3>One licence for the whole organisation</h3>
+      <p>Installed on your own server, the app can be used securely by the whole organisation. A fixed monthly licence fee – with no limit on users or documents.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><rect x="5" y="7" width="30" height="26" rx="2"/><path d="M5 22h14V7M19 15h16M25 22h10v11"/><path d="M24 27h11" opacity=".6"/></svg>
+      <h3>Drawings and plans</h3>
+      <p>Not only A4: large architectural drawings and land plot plans, including scanned ones.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linecap="round"><path d="M5 27c3-10 6-14 8-10s-2 10 2 8 5-12 9-9 1 9 5 7 4-5 6-5"/><path d="M5 33h30"/></svg>
+      <h3>Signatures</h3>
+      <p>Handwritten signatures are detected and covered automatically. Any other text or area you can hide yourself – just select it with the mouse.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><path d="M8 10h24M8 20h16M8 30h10"/><circle cx="29" cy="28" r="6"/><path d="M29 25v3l2 2" stroke-linecap="round"/></svg>
+      <h3>Your own rules</h3>
+      <p>Permit, certificate or contract numbers: enter an example or the exact text and create your own rules for the whole organisation.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 3. HOW IT WORKS: one demo video with voiceover -->
+<section id="video" class="alt">
+<div class="wrap">
+  <div class="split" style="align-items:flex-end">
+    <div>
+      <p class="eyebrow">How it works</p>
+      <h2>Upload, review, download – <span class="hl">just three steps</span></h2>
+      <p class="lead" style="margin-top:20px;font-size:17px">You upload a document – the app finds and covers the personal data on its own and hands you the result to review.</p>
+    </div>
+    <div>
+      <ul class="checks" style="margin:0">
+        <li><span><b>Automatic detection</b> – many types of personal data.</span></li>
+        <li><span><b>Review</b> and easily adjust the results.</span></li>
+        <li><span><b>Select with the mouse</b> – hide any additional text or area.</span></li>
+        <li><span><b>In the downloaded file</b> the data is removed, not just covered.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="frame" style="margin-top:48px">
+    <div class="bar"><span></span><span></span><span></span><em>nuasmeninimas.local</em></div>
+    <video controls playsinline preload="metadata" poster="{{ '/vdo/nuasmeninimas/demo-nuasmeninimas-poster.jpg' | relative_url }}"
+           aria-label="Demo video with voiceover: uploading a contract, automatic detection of personal data, review, selecting extra text with the mouse, and download.">
+      <source src="{{ '/vdo/nuasmeninimas/demo-nuasmeninimas.webm' | relative_url }}" type="video/webm">
+      <source src="{{ '/vdo/nuasmeninimas/demo-nuasmeninimas.mp4' | relative_url }}" type="video/mp4">
+      <track kind="captions" src="{{ '/vdo/nuasmeninimas/demo-nuasmeninimas.en.vtt' | relative_url }}" srclang="en" label="English" default>
+      <track kind="captions" src="{{ '/vdo/nuasmeninimas/demo-nuasmeninimas.lt.vtt' | relative_url }}" srclang="lt" label="Lietuvių">
+    </video>
+  </div>
+</div>
+</section>
+
+<!-- 4. REMOVED, NOT COVERED (before/after) -->
+<section>
+<div class="wrap">
+  <p class="eyebrow">Result</p>
+  <h2>The data is not covered – it is <span class="hl">removed</span></h2>
+  <p class="lead" style="margin-top:20px">On the left – the original with the data the app found. On the right – the downloaded file. A black rectangle in a PDF often only covers text that can still be copied. Here the hidden text is deleted from the file.</p>
+  <div class="shot" style="margin-top:40px"><picture>
+    <source media="(max-width: 767px)" type="image/webp" srcset="{{ '/img/nuasmeninimas/signature-mobile.webp' | relative_url }}">
+    <img src="{{ '/img/nuasmeninimas/before-after-desktop.webp' | relative_url }}" width="1440" height="760" alt="The same agreement before and after redaction: names, personal code, date of birth, addresses, phone, e-mail, bank account, number plate, agreement number and signature are hidden.">
+  </picture>
+    <span class="lbl only-d" style="--x:7.64%;--y:1.8%"><i class="y"></i>Before: detected data</span>
+    <span class="lbl only-d" style="--x:54.17%;--y:1.8%"><i class="p"></i>After: redacted</span>
+    <span class="lbl only-m" style="--x:10.37%;--y:1.5%"><i class="y"></i>Signature detected</span>
+    <span class="lbl only-m" style="--x:10.37%;--y:44.5%"><i class="p"></i>Signature hidden</span>
+  </div>
+  <ul class="checks" style="flex-direction:row;flex-wrap:wrap;gap:12px 32px">
+    <li><b>Text is deleted</b></li>
+    <li><b>Metadata is cleaned</b></li>
+    <li><b>The result is verified</b></li>
+    <li><b>Cannot be restored</b></li>
+  </ul>
+</div>
+</section>
+
+<!-- 5. SECURITY / GDPR -->
+<section id="saugumas" class="alt">
+<div class="wrap">
+  <div class="split" style="align-items:flex-start">
+    <div>
+      <p class="eyebrow">Security and GDPR</p>
+      <h2>Full privacy – <span class="hl">in your own infrastructure</span></h2>
+      <p class="lead" style="margin-top:20px;font-size:17px">The app helps you meet GDPR requirements: documents you publish or share no longer contain excessive personal data, and the documents themselves are processed only on your server.</p>
+    </div>
+    <div class="card" style="padding:32px">
+      <ul class="checks" style="margin:0">
+        <li><span><b>Installed on your server</b> – Windows or Linux, users work in a browser.</span></li>
+        <li><span><b>No internet connection</b> – the app also works in an isolated network.</span></li>
+        <li><span><b>Files are not kept</b> – uploaded and result files are deleted automatically (default setting).</span></li>
+        <li><span><b>Organisation accounts</b> – Active Directory / Entra ID or the app's own users.</span></li>
+        <li><span><b>Administration</b> – settings, users and usage statistics in one place.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 6. DATA TYPES -->
+<section>
+<div class="wrap">
+  <div class="split">
+    <div>
+      <p class="eyebrow">What it finds</p>
+      <h2>11 data types, signatures and <span class="hl">your own rules</span></h2>
+      <p class="lead" style="margin-top:20px;font-size:17px">First and last names (including inflected forms), personal codes, dates of birth, addresses, phone numbers, e-mail addresses, bank accounts, number plates and VIN numbers, real estate numbers, passport and ID card numbers.</p>
+    </div>
+    <div>
+      <div class="shot"><picture>
+        <source media="(max-width: 767px)" type="image/webp" srcset="{{ '/img/nuasmeninimas/data-types-mobile.webp' | relative_url }}">
+        <img src="{{ '/img/nuasmeninimas/data-types-desktop.webp' | relative_url }}" width="900" height="560" alt="List of data types: names, personal codes, bank accounts, e-mail, phone numbers, addresses, number plates and VIN numbers, real estate numbers, dates of birth, passport / ID card numbers, signatures.">
+      </picture>
+    <span class="lbl only-d" style="--x:20.22%;--y:9.29%"><i class="p"></i>11 data types + signatures</span>
+    <span class="lbl only-d" style="--x:62.22%;--y:83.21%"><i class="g"></i>+ your own rules</span>
+    <span class="lbl only-m" style="--x:6.67%;--y:7.67%"><i class="p"></i>11 data types + signatures</span>
+  </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 7. STEPS -->
+<section class="alt">
+<div class="wrap">
+  <p class="eyebrow">How to start</p>
+  <h2>Three steps to a working solution</h2>
+  <ol class="steps">
+    <li class="card"><div class="n">1</div><h3>Demo and offer</h3><p>We show you online how the app works and prepare an individual offer.</p></li>
+    <li class="card hot"><div class="n">2</div><h3>Installation on your server</h3><p>We install and configure it in your infrastructure together with your IT team.</p></li>
+    <li class="card"><div class="n">3</div><h3>Support</h3><p>We update and improve the app and help your users.</p></li>
+  </ol>
+</div>
+</section>
+
+<!-- 8. OFFER (anchor stays #demo) -->
+<section id="demo">
+<div class="wrap">
+  <div class="split" style="align-items:flex-start">
+    <div>
+      <p class="eyebrow">Offer</p>
+      <h2 style="font-size:clamp(34px,4.6vw,56px);line-height:1.08">Get an <span class="hl">individual offer</span></h2>
+      <p class="lead" style="margin-top:20px;font-size:17px">We will show you online how the app works and prepare an offer for your organisation. We reply within 24 hours.</p>
+      <ul class="checks">
+        <li><span>Online demo</span></li>
+        <li><span>An individual offer for your organisation</span></li>
+        <li><span>Monthly licence fee – no limit on users or documents</span></li>
+      </ul>
+    </div>
+    <form class="card" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{{ site.data.contact.web3forms_access_key }}">
+      <input type="hidden" name="subject" value="NUASMENINIMO UŽKLAUSA (EN) from ainno.io">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+      <div class="row">
+        <div><label for="d-name">Name</label><input id="d-name" name="name" type="text" required autocomplete="name"></div>
+        <div><label for="d-email">E-mail</label><input id="d-email" name="email" type="email" required autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}"></div>
+      </div>
+      <div class="row">
+        <div><label for="d-org">Organisation</label><input id="d-org" name="organization" type="text" autocomplete="organization"></div>
+        <div style="min-width:0">{% include landing/phone-field.html id="d-phone" label="Phone number" %}</div></div>
+      <button class="btn btn-primary" type="submit" style="align-self:flex-start">Request an offer</button>
+      <p style="margin:0;font-size:13px;color:var(--muted)">By sending a request you agree to the <a href="{{ '/en/privacy/' | relative_url }}">privacy policy</a>.</p>
+    </form>
+  </div>
+</div>
+</section>
+
+<!-- 9. FAQ -->
+<section id="duk" class="alt">
+<div class="wrap">
+  <p class="eyebrow">FAQ</p>
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details class="card"><summary>How much does it cost?</summary><p>There is a fixed monthly licence fee that does not limit the number of users or documents processed. The price is set individually – get in touch and we will send you an offer.</p></details>
+    <details class="card"><summary>Does the app find 100% of personal data?</summary><p>No, and no automatic tool promises that. That is why you can review the result before downloading, and hide any missed text or area simply by selecting it with the mouse.</p></details>
+    <details class="card"><summary>Are documents sent to the cloud?</summary><p>No. Your documents stay with you: everything happens on your server, and you can work without an internet connection.</p></details>
+    <details class="card"><summary>Can hidden text be restored?</summary><p>No. The text is deleted from the file, the metadata is cleaned, and the result is verified: if a hidden value can still be found, that page is redrawn as an image.</p></details>
+    <details class="card"><summary>How large can documents be?</summary><p>From a single page to hundreds of pages. Large drawings and scanned documents take longer than plain text.</p></details>
+    <details class="card"><summary>How many users can work with it?</summary><p>The licence does not limit the number of users or documents. Users sign in with organisation accounts or the app's own users.</p></details>
+  </div>
+</div>
+</section>
+
+{% include landing/footer.html %}
+</div>

@@ -1,0 +1,358 @@
+---
+layout: landing
+lang: lt
+title: Dokumentų nuasmeninimas
+description: "Automatiškai randa ir pašalina asmens duomenis iš PDF, Word, Excel dokumentų, nuotraukų ir brėžinių. Veikia lokaliai – dokumentai lieka pas jus."
+lt_url: /nuasmeninimas/
+en_url: /en/anonymisation/
+---
+<style>
+:root{
+  --bg:#0c0a1a; --bg-alt:#110e22; --surface:#151228; --line:#2b2647; --line-strong:#4a3d8a;
+  --outline:#5d5488; --text:#f1eefc; --muted:#aaa4c4; --accent:#b794ff; --primary:#7b10ff;
+  --hero:radial-gradient(900px 520px at 85% 0%, #2a1466 0%, #0c0a1a 70%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,video{max-width:100%;height:auto;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:88px 24px}
+.alt{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.eyebrow{margin:0 0 12px;color:var(--accent);font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:700;margin:0}
+h1{font-size:clamp(40px,5.8vw,76px);line-height:1.02;letter-spacing:-.025em}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.12;letter-spacing:-.015em;max-width:760px}
+h3{font-size:21px;line-height:1.25}
+.hl{color:var(--accent)}
+.lead{margin:28px 0 0;max-width:640px;font-size:19px;color:var(--muted)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;border-radius:999px;padding:16px 28px;font-size:16px;cursor:pointer;font-family:inherit;border:0}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 10px 30px -10px rgba(123,16,255,.8)}
+.btn-primary:hover{background:#8a2bff}
+.btn-outline{border:1px solid var(--outline);color:var(--text);padding:15px 26px;background:transparent}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line-strong);color:var(--text);font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px}
+.split{display:flex;flex-wrap:wrap;gap:56px;align-items:center}
+.split>*{flex:1 1 380px;min-width:0}
+.split.rev{flex-direction:row-reverse}
+.checks{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.checks li{display:flex;gap:12px;color:var(--muted)}
+.checks li::before{content:"";flex:0 0 20px;height:20px;margin-top:3px;border-radius:50%;background:rgba(183,148,255,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23b794ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.checks b{color:var(--text);font-weight:600}
+/* header */
+header{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;background:rgba(12,10,26,.88);backdrop-filter:blur(10px)}
+header .in{max-width:1160px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+header nav{display:flex;flex-wrap:wrap;align-items:center;gap:28px}
+header nav a.l{color:var(--text);text-decoration:none;font-size:15px;padding:12px 0}
+.lang{display:flex;align-items:center;gap:8px;font-size:14px}
+.lang b{color:var(--accent)} .lang span,.lang a{color:var(--muted);text-decoration:none}
+header .btn{padding:12px 22px;font-size:15px}
+@media (max-width:760px){header nav a.l{display:none}}
+/* hero */
+.hero{background:var(--hero)}
+.hero .wrap{padding:96px 24px 72px}
+.ctas{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px}
+.hero-img{margin-top:56px}
+.shot.hero-img{display:block}
+/* media frame (matches the dark browser frame used in the images) */
+.frame{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 40px 90px -24px rgba(0,0,0,.75),0 0 80px -20px rgba(123,16,255,.35)}
+.frame .bar{height:36px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 14px}
+.frame .bar span{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.frame .bar em{margin-left:16px;font-style:normal;font-size:12px;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:2px 12px}
+.frame video{width:100%;height:auto;background:#fff}
+/* features */
+.grid{display:flex;flex-wrap:wrap;gap:24px;margin-top:48px}
+.feat{flex:1 1 250px;padding:32px}
+.feat svg{width:40px;height:40px}
+.feat h3{margin:18px 0 8px}
+.feat p{margin:0;color:var(--muted);font-size:15px}
+.feat.hot{background:var(--primary);border-color:var(--primary)}
+.feat.hot p{color:#fff} .feat.hot svg *{stroke:#fff}
+/* steps */
+.steps{list-style:none;margin:48px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:24px}
+.steps li{flex:1 1 300px;padding:32px}
+.steps .n{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:44px;color:var(--accent);line-height:1}
+.steps h3{margin:14px 0 8px}
+.steps p{margin:0;color:var(--muted);font-size:15px}
+.steps li.hot{background:var(--primary);border-color:var(--primary)} .steps li.hot .n,.steps li.hot p{color:#fff}
+/* faq */
+.faq{margin-top:40px;display:flex;flex-direction:column;gap:14px;max-width:860px}
+details{padding:22px 26px}
+summary{cursor:pointer;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--accent);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:14px 0 0;color:var(--muted)}
+/* demo form */
+form{padding:32px;display:flex;flex-direction:column;gap:18px}
+.row{display:flex;flex-wrap:wrap;gap:18px}
+.row>div{flex:1 1 200px;display:flex;flex-direction:column;gap:6px}
+label{font-size:14px;color:var(--muted)}
+input,textarea,select{background:var(--bg);border:1px solid var(--outline);border-radius:10px;color:var(--text);font:inherit;padding:12px 14px;min-height:46px;width:100%}
+textarea{resize:vertical}
+select[data-phone-cc]{width:auto}
+.sent{display:none;padding:14px 16px;border-radius:12px;background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.4);color:#c8f7e3;font-size:14px}
+/* labels over screenshots: HTML, not baked into the images */
+.shot{position:relative;display:block}
+.lbl{position:absolute;left:var(--x);top:var(--y);z-index:2;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:999px;color:var(--text);font-weight:600;
+  font-size:clamp(11px,1.05vw,15px);padding:.45em 1.1em;box-shadow:0 12px 30px -10px rgba(0,0,0,.7)}
+.lbl i{width:.55em;height:.55em;border-radius:50%;display:inline-block}
+.lbl .y{background:#facc15}.lbl .p{background:#b794ff}.lbl .g{background:#34d399}
+.lbl.r{left:auto;right:var(--r)}
+.only-m{display:none}
+@media (max-width:767px){.lbl.only-d{display:none}.lbl.only-m{display:inline-flex;font-size:12px}}
+footer{border-top:1px solid var(--line)}
+footer .in{max-width:1160px;margin:0 auto;padding:40px 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;font-size:14px;color:var(--muted)}
+</style>
+<div class="pg">
+
+<header>
+<div class="in">
+  <a href="{{ '/' | relative_url }}" style="display:flex;align-items:center"><img src="{{ '/img/logo-white.png' | relative_url }}" alt="AINNO" style="height:26px;width:auto"></a>
+  <nav aria-label="Pagrindinė navigacija">
+    <a class="l" href="#funkcijos">Funkcijos</a>
+    <a class="l" href="#saugumas">Saugumas</a>
+    <a class="l" href="#duk">DUK</a>
+    <span class="lang"><b>LT</b><span aria-hidden="true">/</span><a href="{{ '/en/anonymisation/' | relative_url }}" lang="en" hreflang="en" aria-label="Switch to English">EN</a></span>
+    <a class="btn btn-primary" href="#demo">Gauti pasiūlymą</a>
+  </nav>
+</div>
+</header>
+
+<!-- 1. HERO -->
+<section class="hero">
+<div class="wrap">
+  <p class="eyebrow">Dokumentų nuasmeninimas</p>
+  <h1>Nuasmeninkite dokumentus <span class="hl">per minutes, ne valandas</span></h1>
+  <p class="lead">Programa pati randa ir pašalina asmens duomenis iš sutarčių, sprendimų, brėžinių ir kitų dokumentų. Jums lieka tik peržiūrėti rezultatą.</p>
+  <p style="margin:28px 0 0"><span class="badge"><i></i>Veikia lokaliai – dokumentai lieka pas jus</span></p>
+  <div class="ctas">
+    <a class="btn btn-primary" href="#demo">Gauti pasiūlymą</a>
+    <a class="btn btn-outline" href="#video">▶&nbsp; Kaip tai veikia</a>
+  </div>
+  <div class="shot hero-img"><picture>
+    <source media="(max-width: 767px)" type="image/webp" srcset="{{ '/img/nuasmeninimas/hero-mobile.webp' | relative_url }}">
+    <img src="{{ '/img/nuasmeninimas/hero-desktop.webp' | relative_url }}" width="1440" height="810" alt="Originali nuomos sutartis su pažymėtais asmens duomenimis ir ta pati sutartis peržiūros lange, kur duomenys paslėpti.">
+  </picture>
+    <span class="lbl only-d" style="--x:6.67%;--y:14.57%"><i class="y"></i>Originalas</span>
+    <span class="lbl only-d r" style="--r:2.0%;--y:86.42%"><i class="p"></i>17 asmens duomenų paslėpta</span>
+    <span class="lbl only-m" style="--x:6.67%;--y:4.5%"><i class="y"></i>Originalas</span>
+    <span class="lbl only-m" style="--x:62.96%;--y:52.5%"><i class="p"></i>Nuasmeninta</span>
+  </div>
+</div>
+</section>
+
+<!-- 2. FEATURES -->
+<section id="funkcijos">
+<div class="wrap">
+  <p class="eyebrow">Funkcijos</p>
+  <h2>Viskas, ko reikia saugiam dokumentų viešinimui</h2>
+  <div class="grid">
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><path d="M11 5h13l7 7v23H11z"/><path d="M24 5v7h7"/><path d="M15 21h10M15 26h10M15 31h6"/></svg>
+      <h3>Daug failų formatų</h3>
+      <p>PDF (tekstiniai ir skenuoti), Word (.docx), Excel (.xlsx), JPG, JPEG ir PNG nuotraukos, skenuoti dokumentai ir brėžiniai.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><path d="M9 9h16v24H9z"/><path d="M13 5h16v24"/><path d="M17 1h16v24" opacity=".5"/></svg>
+      <h3>Dideli dokumentai</h3>
+      <p>Palaikomi šimtų puslapių dokumentai. Jie apdorojami fone: matote eigą ir galite toliau dirbti.</p>
+    </div>
+    <div class="card feat hot">
+      <svg viewBox="0 0 40 40" fill="none" stroke-width="2" stroke-linejoin="round"><rect x="7" y="18" width="26" height="17" rx="3" stroke="#fff"/><path d="M13 18v-5a7 7 0 0 1 14 0v5" stroke="#fff"/><path d="M20 25v4" stroke="#fff" stroke-linecap="round"/></svg>
+      <h3>Veikia lokaliai</h3>
+      <p>Programa veikia jūsų kompiuteryje ar vidiniame serveryje ir nereikalauja interneto ryšio. Dokumentai lieka pas jus.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><path d="M8 11h24M15 11V7h10v4M11 11l2 24h14l2-24"/><path d="M17 17v12M23 17v12"/></svg>
+      <h3>Pašalinama, ne uždengiama</h3>
+      <p>Paslėptas tekstas ištrinamas iš failo kartu su metaduomenimis (autorius, programa). Rezultatas patikrinamas – duomenų atkurti neįmanoma.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><circle cx="15" cy="14" r="5"/><path d="M5 33c1-6 5-9 10-9s9 3 10 9"/><circle cx="28" cy="15" r="4"/><path d="M27 23c4 0 7 3 8 8"/></svg>
+      <h3>Viena licencija visai organizacijai</h3>
+      <p>Įdiegus savo serveryje programa gali saugiai naudotis visa organizacija. Fiksuotas mėnesinis licencijos mokestis – neribojamas nei naudotojų, nei dokumentų skaičius.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><rect x="5" y="7" width="30" height="26" rx="2"/><path d="M5 22h14V7M19 15h16M25 22h10v11"/><path d="M24 27h11" opacity=".6"/></svg>
+      <h3>Brėžiniai ir planai</h3>
+      <p>Ne tik A4: dideli architektūriniai brėžiniai ir žemės sklypų planai, taip pat skenuoti.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linecap="round"><path d="M5 27c3-10 6-14 8-10s-2 10 2 8 5-12 9-9 1 9 5 7 4-5 6-5"/><path d="M5 33h30"/></svg>
+      <h3>Parašai</h3>
+      <p>Ranka pasirašyti parašai aptinkami ir uždengiami automatiškai. Bet kurį papildomą tekstą ar sritį paslėpsite patys – tiesiog pažymėję pele.</p>
+    </div>
+    <div class="card feat">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#b794ff" stroke-width="2" stroke-linejoin="round"><path d="M8 10h24M8 20h16M8 30h10"/><circle cx="29" cy="28" r="6"/><path d="M29 25v3l2 2" stroke-linecap="round"/></svg>
+      <h3>Savos taisyklės</h3>
+      <p>Leidimų, atestatų ar sutarčių numeriai: įrašykite pavyzdį ar tikslų tekstą bei sukurkite savo taisykles visai organizacijai.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 3. HOW IT WORKS: one demo video with voiceover -->
+<section id="video" class="alt">
+<div class="wrap">
+  <div class="split" style="align-items:flex-end">
+    <div>
+      <p class="eyebrow">Kaip tai veikia</p>
+      <h2>Įkelkite, peržiūrėkite, atsisiųskite – <span class="hl">vos trys žingsniai</span></h2>
+      <p class="lead" style="margin-top:20px;font-size:17px">Įkeliate dokumentą – programa pati randa ir uždengia asmens duomenis ir pateikia rezultatą jūsų peržiūrai.</p>
+    </div>
+    <div>
+      <ul class="checks" style="margin:0">
+        <li><span><b>Automatinis aptikimas</b> – įvairūs asmens duomenų tipai.</span></li>
+        <li><span><b>Peržiūrėkite</b> ir lengvai koreguokite rezultatus.</span></li>
+        <li><span><b>Pažymėkite pele</b> – paslėpsite bet kokį papildomą tekstą ar sritį.</span></li>
+        <li><span><b>Atsisiųstame faile</b> duomenys pašalinti, ne tik uždengti.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="frame" style="margin-top:48px">
+    <div class="bar"><span></span><span></span><span></span><em>nuasmeninimas.local</em></div>
+    <video controls playsinline preload="metadata" poster="{{ '/vdo/nuasmeninimas/demo-nuasmeninimas-poster.jpg' | relative_url }}"
+           aria-label="Demonstracinis vaizdo įrašas su įgarsinimu: sutarties įkėlimas, automatinis asmens duomenų aptikimas, peržiūra, papildomas žymėjimas pele ir atsisiuntimas.">
+      <source src="{{ '/vdo/nuasmeninimas/demo-nuasmeninimas.webm' | relative_url }}" type="video/webm">
+      <source src="{{ '/vdo/nuasmeninimas/demo-nuasmeninimas.mp4' | relative_url }}" type="video/mp4">
+      <track kind="captions" src="{{ '/vdo/nuasmeninimas/demo-nuasmeninimas.lt.vtt' | relative_url }}" srclang="lt" label="Lietuvių" default>
+    </video>
+  </div>
+</div>
+</section>
+
+<!-- 4. REMOVED, NOT COVERED (before/after) -->
+<section>
+<div class="wrap">
+  <p class="eyebrow">Rezultatas</p>
+  <h2>Duomenys ne uždengiami, o <span class="hl">pašalinami</span></h2>
+  <p class="lead" style="margin-top:20px">Kairėje – originalas su programos rastais duomenimis. Dešinėje – atsisiųstas failas. Juodas stačiakampis PDF faile dažnai tik uždengia tekstą, kurį galima nukopijuoti. Čia paslėptas tekstas ištrinamas iš failo.</p>
+  <div class="shot" style="margin-top:40px"><picture>
+    <source media="(max-width: 767px)" type="image/webp" srcset="{{ '/img/nuasmeninimas/signature-mobile.webp' | relative_url }}">
+    <img src="{{ '/img/nuasmeninimas/before-after-desktop.webp' | relative_url }}" width="1440" height="760" alt="Ta pati sutartis prieš ir po nuasmeninimo: vardai, asmens kodas, gimimo data, adresai, telefonas, el. paštas, sąskaita, valstybinis numeris, sutarties numeris ir parašas paslėpti.">
+  </picture>
+    <span class="lbl only-d" style="--x:7.64%;--y:1.8%"><i class="y"></i>Prieš: aptikti duomenys</span>
+    <span class="lbl only-d" style="--x:54.17%;--y:1.8%"><i class="p"></i>Po: nuasmeninta</span>
+    <span class="lbl only-m" style="--x:10.37%;--y:1.5%"><i class="y"></i>Parašas aptiktas</span>
+    <span class="lbl only-m" style="--x:10.37%;--y:44.5%"><i class="p"></i>Parašas paslėptas</span>
+  </div>
+  <ul class="checks" style="flex-direction:row;flex-wrap:wrap;gap:12px 32px">
+    <li><b>Tekstas ištrinamas</b></li>
+    <li><b>Metaduomenys išvalomi</b></li>
+    <li><b>Rezultatas patikrinamas</b></li>
+    <li><b>Atkurti neįmanoma</b></li>
+  </ul>
+</div>
+</section>
+
+<!-- 5. SECURITY / GDPR -->
+<section id="saugumas" class="alt">
+<div class="wrap">
+  <div class="split" style="align-items:flex-start">
+    <div>
+      <p class="eyebrow">Saugumas ir BDAR</p>
+      <h2>Visiškas privatumas – <span class="hl">jūsų infrastruktūroje</span></h2>
+      <p class="lead" style="margin-top:20px;font-size:17px">Programa padeda užtikrinti BDAR reikalavimų laikymąsi: viešinami ar perduodami dokumentai nebeturi perteklinių asmens duomenų, o patys dokumentai apdorojami tik jūsų serveryje.</p>
+    </div>
+    <div class="card" style="padding:32px">
+      <ul class="checks" style="margin:0">
+        <li><span><b>Diegimas jūsų serveryje</b> – Windows arba Linux, naudotojai dirba per naršyklę.</span></li>
+        <li><span><b>Be interneto ryšio</b> – programa veikia ir izoliuotame tinkle.</span></li>
+        <li><span><b>Failai nekaupiami</b> – įkelti ir rezultatų failai automatiškai ištrinami (numatytasis nustatymas).</span></li>
+        <li><span><b>Organizacijos paskyros</b> – Active Directory / Entra ID arba programos naudotojai.</span></li>
+        <li><span><b>Administravimas</b> – nustatymai, naudotojai ir naudojimo statistika vienoje vietoje.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 6. DATA TYPES -->
+<section>
+<div class="wrap">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Ką randa</p>
+      <h2>11 duomenų tipų, parašai ir <span class="hl">jūsų taisyklės</span></h2>
+      <p class="lead" style="margin-top:20px;font-size:17px">Vardai ir pavardės (ir linksniuotos formos), asmens kodai, gimimo datos, adresai, telefonai, el. paštas, banko sąskaitos, valstybiniai ir VIN numeriai, nekilnojamojo turto numeriai, pasų ir ATK numeriai.</p>
+    </div>
+    <div>
+      <div class="shot"><picture>
+        <source media="(max-width: 767px)" type="image/webp" srcset="{{ '/img/nuasmeninimas/data-types-mobile.webp' | relative_url }}">
+        <img src="{{ '/img/nuasmeninimas/data-types-desktop.webp' | relative_url }}" width="900" height="560" alt="Duomenų tipų sąrašas: vardai ir pavardės, asmens kodai, banko sąskaitos, el. paštas, telefonai, adresai, valstybiniai ir VIN numeriai, NT numeriai, gimimo datos, pasų/ATK numeriai, parašai.">
+      </picture>
+    <span class="lbl only-d" style="--x:20.22%;--y:9.29%"><i class="p"></i>11 duomenų tipų + parašai</span>
+    <span class="lbl only-d" style="--x:62.22%;--y:83.21%"><i class="g"></i>+ jūsų taisyklės</span>
+    <span class="lbl only-m" style="--x:6.67%;--y:7.67%"><i class="p"></i>11 duomenų tipų + parašai</span>
+  </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- 7. STEPS -->
+<section class="alt">
+<div class="wrap">
+  <p class="eyebrow">Kaip pradėti</p>
+  <h2>Trys žingsniai iki veikiančio sprendimo</h2>
+  <ol class="steps">
+    <li class="card"><div class="n">1</div><h3>Demonstracija ir pasiūlymas</h3><p>Nuotoliu parodome, kaip programa veikia, ir pateikiame individualų pasiūlymą.</p></li>
+    <li class="card hot"><div class="n">2</div><h3>Diegimas jūsų serveryje</h3><p>Įdiegiame ir sukonfigūruojame jūsų infrastruktūroje kartu su jūsų IT.</p></li>
+    <li class="card"><div class="n">3</div><h3>Priežiūra</h3><p>Atnaujiname, tobuliname ir padedame naudotojams.</p></li>
+  </ol>
+</div>
+</section>
+
+<!-- 8. OFFER (anchor stays #demo) -->
+<section id="demo">
+<div class="wrap">
+  <div class="split" style="align-items:flex-start">
+    <div>
+      <p class="eyebrow">Pasiūlymas</p>
+      <h2 style="font-size:clamp(34px,4.6vw,56px);line-height:1.08">Gaukite <span class="hl">individualų pasiūlymą</span></h2>
+      <p class="lead" style="margin-top:20px;font-size:17px">Nuotoliu parodysime, kaip programa veikia, ir pateiksime pasiūlymą jūsų organizacijai. Atsakysime per 24 valandas.</p>
+      <ul class="checks">
+        <li><span>Demonstracija nuotoliu</span></li>
+        <li><span>Individualus pasiūlymas jūsų organizacijai</span></li>
+        <li><span>Mėnesinis licencijos mokestis – neribojant naudotojų ir dokumentų</span></li>
+      </ul>
+    </div>
+    <form class="card" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{{ site.data.contact.web3forms_access_key }}">
+      <input type="hidden" name="subject" value="NUASMENINIMO UŽKLAUSA iš ainno.io">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+      <div class="row">
+        <div><label for="d-name">Vardas</label><input id="d-name" name="name" type="text" required autocomplete="name"></div>
+        <div><label for="d-email">El. paštas</label><input id="d-email" name="email" type="email" required autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}"></div>
+      </div>
+      <div class="row">
+        <div><label for="d-org">Organizacija</label><input id="d-org" name="organization" type="text" autocomplete="organization"></div>
+        <div style="min-width:0">{% include landing/phone-field.html id="d-phone" label="Telefono numeris" %}</div></div>
+      <button class="btn btn-primary" type="submit" style="align-self:flex-start">Gauti pasiūlymą</button>
+      <p style="margin:0;font-size:13px;color:var(--muted)">Siųsdami užklausą sutinkate su <a href="{{ '/privacy/' | relative_url }}">privatumo politika</a>.</p>
+    </form>
+  </div>
+</div>
+</section>
+
+<!-- 9. FAQ -->
+<section id="duk" class="alt">
+<div class="wrap">
+  <p class="eyebrow">DUK</p>
+  <h2>Dažniausi klausimai</h2>
+  <div class="faq">
+    <details class="card"><summary>Kiek kainuoja?</summary><p>Taikomas fiksuotas mėnesinis licencijos mokestis, kuris neriboja nei naudotojų, nei apdorojamų dokumentų skaičiaus. Kainą nustatome individualiai – susisiekite ir pateiksime pasiūlymą.</p></details>
+    <details class="card"><summary>Ar programa randa 100 % asmens duomenų?</summary><p>Ne, ir to nežada joks automatinis įrankis. Todėl rezultatą galite peržiūrėti prieš atsisiųsdami, o praleistą tekstą ar sritį paslėpti tiesiog pažymėję pele.</p></details>
+    <details class="card"><summary>Ar dokumentai siunčiami į debesį?</summary><p>Ne. Dokumentai lieka pas jus: viskas vyksta jūsų serveryje, galima dirbti ir be interneto.</p></details>
+    <details class="card"><summary>Ar paslėptą tekstą galima atkurti?</summary><p>Ne. Tekstas ištrinamas iš failo, metaduomenys išvalomi, o rezultatas patikrinamas: jei paslėptos reikšmės dar galima rasti, toks puslapis perpiešiamas kaip vaizdas.</p></details>
+    <details class="card"><summary>Kokio dydžio dokumentus galima apdoroti?</summary><p>Nuo vieno puslapio iki šimtų puslapių. Dideli brėžiniai ir skenuoti dokumentai užtrunka ilgiau nei paprastas tekstas.</p></details>
+    <details class="card"><summary>Kiek naudotojų gali dirbti?</summary><p>Licencija neriboja nei naudotojų, nei dokumentų skaičiaus. Prisijungti galima per organizacijos paskyras arba programos naudotojus.</p></details>
+  </div>
+</div>
+</section>
+
+{% include landing/footer.html %}
+</div>
