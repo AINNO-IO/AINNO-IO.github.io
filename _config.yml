@@ -17,33 +17,14 @@ locale              : lt_LT
 lang                : lt
 favicon: 'img/favicon.png'
 
-paginate: 12
-paginate_path: "/blog/page:num/"
-
-sass:
-    sass_dir: _sass
-    style: compressed
-
 # Build settings
 markdown            : kramdown
 
 # google_analytics
 google_analytics: 
 
-# disqus comment
-disqus_shortname: softdash
 
 
-####################################
-######     Hero start     ######
-####################################
-# product_background_image          sass
-# product_fixed_image               saas_video             
-# product                           sass_background_image
-# product_slider                    sass_fixed_image
-# product_video                     sass_slider       
-
-hero: 'product_fixed_image'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -78,9 +59,6 @@ whitelist:
 ####################################
 
 
-mailchimp:
-  user-id: 
-  list-id: 
 
 ####################################
 ######        Copyright       ######
