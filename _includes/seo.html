@@ -61,11 +61,11 @@
 {%- assign site_og_image = site_og_image | escape -%}
 
 {%- assign og_image_select = '' -%}
-{%- if page_large_image != "" -%}
+{%- if page_large_image.size > 0 -%}
   {%- assign og_image_select = page_large_image -%}
-{%- elsif page_teaser_image != "" -%}
+{%- elsif page_teaser_image.size > 0 -%}
   {%- assign og_image_select = page_teaser_image -%}
-{%- elsif site_og_image != "" -%}
+{%- elsif site_og_image.size > 0 -%}
   {%- assign og_image_select = site_og_image -%}
 {%- endif -%}
 
