@@ -328,11 +328,12 @@ footer .in{max-width:1160px;margin:0 auto;padding:40px 24px;display:flex;flex-wr
       <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
       <div class="row">
         <div><label for="d-name">Name</label><input id="d-name" name="name" type="text" required autocomplete="name"></div>
-        <div><label for="d-email">E-mail</label><input id="d-email" name="email" type="email" required autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}"></div>
+        <div><label for="d-org">Organisation</label><input id="d-org" name="organization" type="text" autocomplete="organization"></div>
       </div>
       <div class="row">
-        <div><label for="d-org">Organisation</label><input id="d-org" name="organization" type="text" autocomplete="organization"></div>
+        <div><label for="d-email">E-mail</label><input id="d-email" name="email" type="email" required autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}"></div>
         <div style="min-width:0">{% include landing/phone-field.html id="d-phone" label="Phone number" %}</div></div>
+      <div class="row"><div><label for="d-msg">Which documents do you redact?</label><textarea id="d-msg" name="message" rows="4" placeholder="E.g. contracts and decisions for publication, about 200 documents a month"></textarea></div></div>
       <button class="btn btn-primary" type="submit" style="align-self:flex-start">Request an offer</button>
       <p style="margin:0;font-size:13px;color:var(--muted)">By sending a request you agree to the <a href="{{ '/en/privacy/' | relative_url }}">privacy policy</a>.</p>
     </form>

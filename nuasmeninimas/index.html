@@ -327,11 +327,12 @@ footer .in{max-width:1160px;margin:0 auto;padding:40px 24px;display:flex;flex-wr
       <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
       <div class="row">
         <div><label for="d-name">Vardas</label><input id="d-name" name="name" type="text" required autocomplete="name"></div>
-        <div><label for="d-email">El. paštas</label><input id="d-email" name="email" type="email" required autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}"></div>
+        <div><label for="d-org">Organizacija</label><input id="d-org" name="organization" type="text" autocomplete="organization"></div>
       </div>
       <div class="row">
-        <div><label for="d-org">Organizacija</label><input id="d-org" name="organization" type="text" autocomplete="organization"></div>
+        <div><label for="d-email">El. paštas</label><input id="d-email" name="email" type="email" required autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}"></div>
         <div style="min-width:0">{% include landing/phone-field.html id="d-phone" label="Telefono numeris" %}</div></div>
+      <div class="row"><div><label for="d-msg">Kokius dokumentus nuasmeninate?</label><textarea id="d-msg" name="message" rows="4" placeholder="Pvz.: sutartys ir sprendimai viešinimui, apie 200 dokumentų per mėnesį"></textarea></div></div>
       <button class="btn btn-primary" type="submit" style="align-self:flex-start">Gauti pasiūlymą</button>
       <p style="margin:0;font-size:13px;color:var(--muted)">Siųsdami užklausą sutinkate su <a href="{{ '/privacy/' | relative_url }}">privatumo politika</a>.</p>
     </form>
