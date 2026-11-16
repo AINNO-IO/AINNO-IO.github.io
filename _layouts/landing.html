@@ -3,14 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Security: only own scripts/styles/fonts/media; forms may only send to Web3Forms. Inline scripts are the layout's own. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self' https://api.web3forms.com; form-action https://api.web3forms.com; frame-src 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#0c0a1a">
 <link rel="shortcut icon" href="{{ site.favicon | relative_url }}">
 <link rel="alternate" hreflang="lt" href="{{ page.lt_url | default: '/' | absolute_url }}">
 <link rel="alternate" hreflang="en" href="{{ page.en_url | default: '/en/' | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ page.lt_url | default: '/' | absolute_url }}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="{{ '/fonts/landing/inter-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/fonts/landing/space-grotesk-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ 'css/landing-fonts.css' | relative_url }}">
 <link rel="stylesheet" href="{{ 'css/landing.css' | relative_url }}">
 {% if page.url == '/' %}
 <script>
